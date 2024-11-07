@@ -23,5 +23,5 @@ More specific information about the SATIM-eSAGE model can be found in the [Docum
 
 The list of developers, contributors and reviewers is described in the [Acknowledgements section](/docs/source/9999Acknowledgements.md).
 
-SATIM-eSAGE is the successor model to the **South Africa TIMES Model (SATIM)** , which has been developed by the **Energy Research Centre at UCT** funded through various projects, and has played a significant role in informing the evidence based climate target setting in South Africa.
+SATIM-eSAGE is the successor model to the **South Africa TIMES Model (SATIM)** , which has been developed by the **Energy Systems Research Group (ESRG) at UCT** funded through various projects, and has played a significant role in informing the evidence based climate target setting in South Africa.
 
