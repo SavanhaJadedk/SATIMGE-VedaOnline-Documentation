@@ -1,0 +1,7 @@
+jupyter-book
+matplotlib
+numpy
+pandas
+openpyxl
+sphinx_rtd_theme
+
