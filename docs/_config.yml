@@ -4,6 +4,7 @@
 title: My sample book
 author: The Jupyter Book Community
 logo: logo.png
+
 html:
   theme: sphinx_rtd_theme
   
@@ -17,12 +18,11 @@ latex:
   latex_documents:
     targetname: book.tex
 
-extensions = [
-    ...
-    'sphinx_rtd_theme',
-]
+# Extensions list in proper YAML format
+extensions:
+  - sphinx_rtd_theme
 
-RTD_NEW_THEME = True
+RTD_NEW_THEME: true
 
 # Add a bibtex file so that we can create citations
 bibtex_bibfiles:
