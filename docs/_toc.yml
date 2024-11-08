@@ -1,12 +1,22 @@
 # Table of contents
-format: jb-book
-root: 01intro
-chapters:
-  - file: 02SATIM Model Structure
-  - file: 03eSAGE Model Structure
-  - file: 04Model Linkage
-  - file: 10VedaOnline  
-  - file: 11VORes
-  - file: 12VOCom
+# Learn more at https://jupyterbook.org/customize/toc.html
 
+format: jb-book
+root: intro
+chapters:
+- file: 00Acknowledgements
+- file: 01Introduction
+- file: 02SATIMGE
+- file: 03Energydemand
+- file: 04EnergySupply
+- file: 05Crosscuttingindustries
+- file: 06Scenariodevelopment
+- file: 07Keyassumptions
+- file: 08Residential
+- file: 99refs
+- file: Annex 1 Techs
+- file: Annex 2 Fuels
+- file: markdown
+- file: notebooks
+- file: markdown-notebooks
 

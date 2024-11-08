@@ -1,0 +1,590 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>1 Introduction &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '01Introduction';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="2 Long-term energy systems modelling – SATIMGE" href="02SATIMGE.html" />
+    <link rel="prev" title="Acknowledgements" href="00Acknowledgements.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="My sample book - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome to the read-the-docs for the SATIM-eSAGE linked modelling framework.
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="00Acknowledgements.html">Acknowledgements</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">1 Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02SATIMGE.html">2 Long-term energy systems modelling – SATIMGE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03Energydemand.html">3 Energy demand</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04EnergySupply.html">4 Energy supply</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05Crosscuttingindustries.html">5 Cross-cutting energy industries and technologies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06Scenariodevelopment.html">6 Scenario development and analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="07Keyassumptions.html">7 Key assumptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="08Residential.html">8 Residential Sector</a></li>
+<li class="toctree-l1"><a class="reference internal" href="99refs.html">References</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="Annex%201%20Techs.html">Annex 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Annex%202%20Fuels.html">Annex 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="markdown.html">Markdown Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks.html">Content with notebooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2F01Introduction.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/01Introduction.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>1 Introduction</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#background">1.1 Background</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integrated-energy-planning-and-the-role-of-energy-systems-modelling">1.2 Integrated energy planning and the role of energy systems modelling</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scope-and-limitations-of-this-report">1.3 Scope and limitations of this report</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="introduction">
+<h1>1 Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h1>
+<p>WWF South Africa (WWF) have embarked on a process to equip stakeholders to engage effectively in the process of integrated energy planning, following the enactment of Section 6 of the National Energy Act of 2008 thereby mandating the Department of Minerals and Energy Resources (DMRE) to develop and update the official Integrated Energy Plan (IEP) for South Africa. The Energy Systems Research Group (ESRG) has been appointed by WWF to provide technical analysis and an evidence base to support WWF’s process of engagement with stakeholders for the IEP.</p>
+<p>This methodological paper highlights the processes, assumptions and structures of the long-term energy systems modelling analysis that will be undertaken in this work to inform and develop the evidence base upon which stakeholders can engage with the IEP process.</p>
+<section id="background">
+<h2>1.1 Background<a class="headerlink" href="#background" title="Link to this heading">#</a></h2>
+<p>Integrated energy planning is an analytical process through which interactions between production and use of energy, and the linkages between energy, macro-economic factors, and socio-economic objectives can be understood.</p>
+<p>In South Africa, the 1998 White Paper on Energy Policy identified integrated energy planning as a key analytical framework for undertaking energy policy analysis and formulation, in order “to facilitate the optimal consumption of energy resources to meet social needs” (Department of Minerals and Energy, 1998). South Africa’s first IEP was published by the Department of Minerals and Energy (DME) in 2003 and was intended to provide a framework within which energy policy and development decisions could be made through analysis of costs and social and environmental impacts of different energy scenarios (DME, 2003).</p>
+<p>The National Energy Act of 2008 established a legal basis for integrated energy planning in South Africa, with Section 6 of the Act mandating the Minister of Minerals and Energy (now Mineral Resources and Energy) to develop, review, and publish the IEP. The Act specifies objectives that the IEP must account for, including interlinkages with other sectoral plans and national policy objectives it must address, as well as guidance it must provide in terms of energy infrastructure investments and technology selection.</p>
+<p>On 28 April 2023 the President issued a proclamation notice stating that Section 6 of the Act would come into operation as of 1 April 2024 (Presidency, 2023) thereby directing the DMRE to initiate the process for development of South Africa’s official IEP.</p>
+</section>
+<section id="integrated-energy-planning-and-the-role-of-energy-systems-modelling">
+<h2>1.2 Integrated energy planning and the role of energy systems modelling<a class="headerlink" href="#integrated-energy-planning-and-the-role-of-energy-systems-modelling" title="Link to this heading">#</a></h2>
+<p>Integrated energy planning involves detailed and comprehensive analysis of the energy sector, interaction between energy demand and energy supply, and linkages with the rest of the economy, and is used to form the basis of policy formulation and evaluation, and strategy development and implementation, to manage the demand and supply of energy to achieve desirable objectives (Eberhard, 1992). Whereas energy subsectors, such as electricity supply, have been typically analysed in isolation from other subsectors – for example, the Integrated <em>Resource</em> Plan (IRP) for electricity (DMRE, 2019 &amp; 2024; Department of Energy (DoE), 2011) – an Integrated <em>Energy</em> Plan (IEP) considers how all components of the energy system interact with each other, how they respond to shifts in energy demand and energy efficiency, and how the energy sector affects and is affected by the rest of the economy, and by other socio-economic and environmental factors, objectives and limitations.</p>
+<p><strong>A comprehensive integrated energy plan must thus address how the energy sector and energy policy decisions interact with the economy, society, equity, and the environment</strong>. The National Energy Act of South Africa provides clear guidance for this, with Section 6(2) stating that:</p>
+<p>“<em>The Integrated Energy Plan must deal with issues relating to the</em> <strong><em>supply, transformation, transport, storage of and demand</em></strong> <em>for energy in a way that accounts for—</em></p>
+<ul class="simple">
+<li><p><em>security of supply;</em></p></li>
+<li><p><em>economically available energy resources:</em></p></li>
+<li><p><em>affordability;</em></p></li>
+<li><p><em>universal accessibility and free basic electricity;</em></p></li>
+<li><p><em>social equity;</em></p></li>
+<li><p><em>employment;</em></p></li>
+<li><p><em>the environment;</em></p></li>
+<li><p><em>international commitments;</em></p></li>
+<li><p><em>consumer protection; and</em></p></li>
+<li><p><em>contribution of energy supply to socio-economic development.</em>”</p></li>
+</ul>
+<p>The Energy Policy White Paper (DME, 1998) provides guidance on the roles and technical functions of integrated energy planning, of which the most important steps can be summarised as:</p>
+<ul class="simple">
+<li><p><strong>Interpreting the requirements of national social, economic, and environmental policies and objectives</strong> for the energy sector.</p></li>
+<li><p><strong>Analysing current and future energy demand needs</strong> in the context of technological evolution, industrialisation, and socio-economic growth and development objectives – including, for example, minimum universal energy access levels.</p></li>
+<li><p><strong>Analysing potential energy supply systems and technologies</strong>, as well as demand-side management measures (including energy efficiency), to meet the current and future energy demand, further contextualised by additional objectives or constraints – for example, achieving a net zero CO<sub>2</sub> emissions energy system by 2050.</p></li>
+<li><p><strong>Analysing linkages between the energy sector and the macro-economy</strong> and <em>vice versa.</em></p></li>
+<li><p><strong>Identifying where policy intervention is needed</strong> to direct the development of the energy sector toward the desired social, economic, and environmental objectives.</p></li>
+</ul>
+<p>These questions pertain to the <strong>long-term</strong> future of the energy sector and its linkages to long-term social objectives, and integrated energy planning is a framework specifically for this long-term forward-looking context. Section 6(5) of the Act reflects this with the specification that the planning horizon for the IEP should be a minimum of 20 years.</p>
+<p>In this way, integrated energy planning builds understanding of long-term energy futures through <strong>scenario analysis</strong>. Scenarios are designed to analyse the future energy sector on the basis of <strong>quantitative indicators</strong> that characterise long-term energy and energy-interlinked objectives and limitations.</p>
+<p>These scenarios are then modelled in order to characterise potential <strong>pathways</strong> that might be taken to reach these long-term outcomes, accounting for possible variations, interventions (including <strong>policies and measures</strong>) and constraints along the way. In this way, <strong>long-term energy systems modelling is fundamental to integrated energy planning</strong>.</p>
+<p>Different energy model frameworks can be applied for long-term energy analysis. For example, simulation models, such as <em>LEAP</em>, could be used to compare and contrast the long-term costs and emissions of various energy technology build pathways over the modelling horizon (e.g. Stone &amp; Wiswedel, 2015). Another example is the use of the PLEXOS modelling software to analyse long-term electricity generation build-plans to respond to simulated electricity consumption and demand profile projections, as is performed by the DMRE and Eskom in the development of the Integrated Resource Plan (DMRE, 2024).</p>
+<p>However <strong>effective <em>integrated</em> energy planning requires a model framework that analyses dynamic variations in both energy supply and energy demand</strong>, whereby the model can shift energy demand according to shifts in demand drivers (e.g. increased economic activity, increased process efficiency, etc.) and then shift energy supply to meet the changed demand. This is necessary because effective integrated energy planning is <strong>demand-led</strong> – i.e. it follows, in simple terms, the principle of first identifying the energy demand, and then identifying the energy supply mix to meet that demand.</p>
+<p><strong>ESRG’s SATIMGE modelling framework</strong> is uniquely able to perform this analysis for the South African context. It encompasses the South African TIMES Model (<strong>SATIM</strong>), which models South Africa’s entire energy system, from energy end-uses downstream up through primary energy extraction upstream, integrated with an economic CGE model for South Africa’s social accounting matrix (<strong>SAGE</strong>), which can analyse how socio-economic indicators at macro level respond to investments and shifts in the energy sector.</p>
+<p>SATIMGE is thus ideally positioned to perform analysis to provide evidence-based inputs for engagement with integrated energy planning in South Africa.</p>
+</section>
+<section id="scope-and-limitations-of-this-report">
+<h2>1.3 Scope and limitations of this report<a class="headerlink" href="#scope-and-limitations-of-this-report" title="Link to this heading">#</a></h2>
+<p>This report provides an overview of the methodological approach that will be undertaken by the ESRG to support WWF in the development of an evidence-base to inform stakeholders in their prospective engagement with the IEP. More specifically, this report highlights how the SATIMGE modelling framework will be applied in the analysis of scenarios for the future energy sector and its interlinkages with desired long-term social, economic, and environmental objectives. To that end, the report proceeds as follows:</p>
+<ul class="simple">
+<li><p><strong>SATIMGE is introduced</strong> with an overview of its components and how they interlink.</p></li>
+<li><p><strong>South African energy demand sectors are described</strong>, in terms of how they are represented and modelled in SATIM both in terms of their current energy needs and consumption as well as how these may evolve in the long-term.</p></li>
+<li><p><strong>Energy supply and demand-side management options are described</strong>, also in terms of how they are currently set up in SATIM, and how the model determines long-term energy investment choices to meet future demand.</p></li>
+<li><p><strong>The method for indicators and scenario analysis is introduced</strong>, including an overview of a framework for collaborative scenario development as well as an initial description of indicators.</p></li>
+<li><p><strong>A list of key assumptions is provided</strong> which form the basis of drivers for the modelling analysis.</p></li>
+</ul>
+<p>The report concludes with a summary of the methodological approach for the project, including highlighting the key indicators for the modelling work, and identifies key next steps to be undertaken in the project.</p>
+<p>It should be noted that this report does not cover the following:</p>
+<ul class="simple">
+<li><p><strong>Policy analysis</strong>: whilst policy evaluation and gap analysis form a key component of integrated energy planning and will feature as part of the ongoing work of the project, this will not be covered in detail in this methodological report, as the focus here is primarily on the modelling methodology.</p></li>
+<li><p><strong>Developed scenarios and detailed indicators</strong>: this report outlines the framework, approach, and key indicators for scenario analysis; however, the actual development of scenarios is a collaborative process, involving all the relevant stakeholders, which will continue to unfold and form the basis of the next phase of work in this project. <strong>This report also does not document detailed indicators or data describing these, but these will be discussed in subsequent workshops and form the subject of a further report to inform WWF’s IEP engagement process.</strong></p></li>
+<li><p><strong>Detailed modelling data</strong>: this report covers the methodology for the modelling, including detail on how energy demand and supply are characterised and calculated in each sector, as well as key driving assumptions, but does not provide a comprehensive reference of all the input data, assumptions, and technical structure of the underlying modelling mechanics. Recognising the importance of transparency, the ESRG is undertaking a separate and comprehensive process of model documentation to ensure that this information is publicly available and will be available to stakeholders for scrutiny as this work develops further.</p></li>
+</ul>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="00Acknowledgements.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Acknowledgements</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="02SATIMGE.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">2 Long-term energy systems modelling – SATIMGE</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#background">1.1 Background</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integrated-energy-planning-and-the-role-of-energy-systems-modelling">1.2 Integrated energy planning and the role of energy systems modelling</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scope-and-limitations-of-this-report">1.3 Scope and limitations of this report</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

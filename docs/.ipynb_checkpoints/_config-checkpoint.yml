@@ -4,15 +4,7 @@
 title: My sample book
 author: The Jupyter Book Community
 logo: logo.png
-html:
-  theme: sphinx_rtd_theme
-  theme_options:
-    logo_only: True        # If you want the logo to appear without the title next to it
-    collapse_navigation: False  # Keeps the side navigation expanded
-    style_nav_header_background: "#2980B9"  # Customize the top navigation bar color (OSeMOSYS uses a blueish tone)
-    display_version: False  # Disable version number display in the sidebar
-    prev_next_buttons_location: 'bottom'  # Navigation buttons at the bottom only
-  
+
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
 execute:
