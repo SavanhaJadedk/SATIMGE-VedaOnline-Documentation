@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>The Commercial Sector (Veda Online) &#8212; SATIMGE Documentation</title>
+    <title>12 The Commercial Sector &#8212; SATIMGE Documentation</title>
   
   
   
@@ -62,6 +62,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = '12VOCom';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="13 The Transport Sector" href="13VOTra.html" />
     <link rel="prev" title="The Residential Sector (Veda Online)" href="11VORes.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -176,8 +177,12 @@
 <li class="toctree-l1"><a class="reference internal" href="03eSAGE%20Model%20Structure.html">3. eSAGE Model Structure</a></li>
 <li class="toctree-l1"><a class="reference internal" href="04Model%20Linkage.html">4. Model Linkage</a></li>
 <li class="toctree-l1"><a class="reference internal" href="10VedaOnline.html">10. Navigating SATIM with Veda Online</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10.1VONamingConv.html">SATIM Nomenclature and Naming Conventions</a></li>
+
 <li class="toctree-l1"><a class="reference internal" href="11VORes.html">The Residential Sector (Veda Online)</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">The Commercial Sector (Veda Online)</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">12 The Commercial Sector</a></li>
+<li class="toctree-l1"><a class="reference internal" href="13VOTra.html">13 The Transport Sector</a></li>
+<li class="toctree-l1"><a class="reference internal" href="14Ind1.html">14 The Industrial Sector</a></li>
 </ul>
 
     </div>
@@ -363,7 +368,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>The Commercial Sector (Veda Online)</h1>
+    <h1>12 The Commercial Sector</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -394,13 +399,42 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="the-commercial-sector-veda-online">
-<h1>The Commercial Sector (Veda Online)<a class="headerlink" href="#the-commercial-sector-veda-online" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="the-commercial-sector">
+<h1><a class="toc-backref" href="#id1" role="doc-backlink">12 The Commercial Sector</a><a class="headerlink" href="#the-commercial-sector" title="Link to this heading">#</a></h1>
+<nav class="contents" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#the-commercial-sector" id="id1">12 The Commercial Sector</a></p>
+<ul>
+<li><p><a class="reference internal" href="#modelling-structure" id="id2">12.1 Modelling Structure</a></p>
+<ul>
+<li><p><a class="reference internal" href="#res-diagram-for-the-commercial-sector" id="id3">RES Diagram for the Commercial Sector</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#table-x-key-references-from-the-commercial-sector" id="id4">Table x: Key References from the Commercial Sector</a></p></li>
+<li><p><a class="reference internal" href="#attributes-in-the-commercial-sector" id="id5">12.2 Attributes in the Commercial Sector</a></p>
+<ul>
+<li><p><a class="reference internal" href="#commodities-in-the-commercial-sector" id="id6">12.3 Commodities in the Commercial Sector</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#processes-in-the-commercial-sector" id="id7">12.4 Processes in the Commercial Sector</a></p></li>
+</ul>
+</li>
+</ul>
+</nav>
 <section id="modelling-structure">
-<h2>12.1 Modelling Structure<a class="headerlink" href="#modelling-structure" title="Link to this heading">#</a></h2>
+<h2><a class="toc-backref" href="#id2" role="doc-backlink">12.1 Modelling Structure</a><a class="headerlink" href="#modelling-structure" title="Link to this heading">#</a></h2>
+<p>The commercial buildings sector in SATIM includes wholesale, retail and motor trade services, warehouses and industrial spaces, office buildings, banking facilities, and other non-residential and government spaces including schools, hospitals, hotels, and recreational facilities. Public sector floor area, which primarily serves public services, includes public lighting and water services is also considered.</p>
+<p>Commercial sector energy service demand is estimated based on the energy intensity of energy services required as a function of lettable floor area (PJ/m2) and is linked to growth in floor area and improvements in energy efficiency over time. Final energy demand is internally computed within SATIM, factoring in technology efficiency and penetration within the sector, as the model assumes that energy services in new buildings can be delivered more efficiently with newer technologies, while constraints on residual capacity and building design limit the adoption of newer technologies and other improvements in energy efficiency in older buildings.</p>
+<p>Energy services are disaggregated into cooling, space heating, cooking, lighting, refrigeration, water heating, public lighting, public water supply, and other appliances. As with the residential sector, end-uses can be represented either by fuel or technology. Technology shares encompass the prevalence, activity levels, and efficiencies of different technology types supplying specific energy services.</p>
 <p>(include Res and short description/table - start with IEP demand modelling document)</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Not working yet</span>
 
 <span class="kn">import</span> <span class="nn">openpyxl</span>
@@ -478,17 +512,29 @@ document.write(`
 </pre></div>
 </div>
 </div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Image saved at C:\Users\savan\SATIMGE-VedaOnline-Documentation\SATIMGE-VedaOnline-Documentation\docs\Images\com_res_diagram.png
 </pre></div>
 </div>
 </div>
+</details>
 </div>
 <section id="res-diagram-for-the-commercial-sector">
-<h3>RES Diagram for the Commercial Sector<a class="headerlink" href="#res-diagram-for-the-commercial-sector" title="Link to this heading">#</a></h3>
+<h3><a class="toc-backref" href="#id3" role="doc-backlink">RES Diagram for the Commercial Sector</a><a class="headerlink" href="#res-diagram-for-the-commercial-sector" title="Link to this heading">#</a></h3>
 <p>The following diagram represents the RES equipment configuration for the commercial sector:</p>
 <p><img alt="Commercial RES Diagram" src="_images/com_res_diagram.png" /></p>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">openpyxl</span>
 
@@ -517,13 +563,19 @@ document.write(`
 </pre></div>
 </div>
 </div>
+</details>
 </div>
 </section>
 </section>
 <section id="table-x-key-references-from-the-commercial-sector">
-<h2>Table x: Key References from the Commercial Sector<a class="headerlink" href="#table-x-key-references-from-the-commercial-sector" title="Link to this heading">#</a></h2>
+<h2><a class="toc-backref" href="#id4" role="doc-backlink">Table x: Key References from the Commercial Sector</a><a class="headerlink" href="#table-x-key-references-from-the-commercial-sector" title="Link to this heading">#</a></h2>
 <p>This table consolidates key references used in the commercial sector modelling. It includes essential data variables, their corresponding values, units, and references, with relevant assumptions and workbook locations. It is designed to ensure transparency and traceability in the analysis.</p>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">openpyxl</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -565,45 +617,46 @@ document.write(`
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
 <div class="output text_html"><style type="text/css">
-#T_c29cb_row0_col0, #T_c29cb_row0_col1, #T_c29cb_row0_col2, #T_c29cb_row0_col3, #T_c29cb_row0_col4, #T_c29cb_row0_col5, #T_c29cb_row0_col6, #T_c29cb_row1_col0, #T_c29cb_row1_col1, #T_c29cb_row1_col2, #T_c29cb_row1_col3, #T_c29cb_row1_col4, #T_c29cb_row1_col5, #T_c29cb_row1_col6 {
+#T_95619_row0_col0, #T_95619_row0_col1, #T_95619_row0_col2, #T_95619_row0_col3, #T_95619_row0_col4, #T_95619_row0_col5, #T_95619_row0_col6, #T_95619_row1_col0, #T_95619_row1_col1, #T_95619_row1_col2, #T_95619_row1_col3, #T_95619_row1_col4, #T_95619_row1_col5, #T_95619_row1_col6 {
   text-align: left;
 }
 </style>
-<table id="T_c29cb">
+<table id="T_95619">
   <thead>
     <tr>
       <th class="blank level0" >&nbsp;</th>
-      <th id="T_c29cb_level0_col0" class="col_heading level0 col0" >Description </th>
-      <th id="T_c29cb_level0_col1" class="col_heading level0 col1" >Value (Range)</th>
-      <th id="T_c29cb_level0_col2" class="col_heading level0 col2" >Unit</th>
-      <th id="T_c29cb_level0_col3" class="col_heading level0 col3" >Other dimension</th>
-      <th id="T_c29cb_level0_col4" class="col_heading level0 col4" >Reference (Harvard format)</th>
-      <th id="T_c29cb_level0_col5" class="col_heading level0 col5" >Notes/Assumptions</th>
-      <th id="T_c29cb_level0_col6" class="col_heading level0 col6" >Workbook Location </th>
+      <th id="T_95619_level0_col0" class="col_heading level0 col0" >Description </th>
+      <th id="T_95619_level0_col1" class="col_heading level0 col1" >Value (Range)</th>
+      <th id="T_95619_level0_col2" class="col_heading level0 col2" >Unit</th>
+      <th id="T_95619_level0_col3" class="col_heading level0 col3" >Other dimension</th>
+      <th id="T_95619_level0_col4" class="col_heading level0 col4" >Reference (Harvard format)</th>
+      <th id="T_95619_level0_col5" class="col_heading level0 col5" >Notes/Assumptions</th>
+      <th id="T_95619_level0_col6" class="col_heading level0 col6" >Workbook Location </th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th id="T_c29cb_level0_row0" class="row_heading level0 row0" >0</th>
-      <td id="T_c29cb_row0_col0" class="data row0 col0" >Capital cost for retrofitting current existing kilns with CCS capture technology</td>
-      <td id="T_c29cb_row0_col1" class="data row0 col1" >Rather link to cells in location. 2017: 2022 ZAR R/kW</td>
-      <td id="T_c29cb_row0_col2" class="data row0 col2" >ZAR/t CO2 captured</td>
-      <td id="T_c29cb_row0_col3" class="data row0 col3" >By 2030, 2040</td>
-      <td id="T_c29cb_row0_col4" class="data row0 col4" >Department of Mineral Resources and Energy (2019). Integrated Resource Plan (IRP2019). [online] Available at: https://www.energy.gov.za/IRP/2019/IRP-2019.pdf </td>
-      <td id="T_c29cb_row0_col5" class="data row0 col5" >The capital costs show that to retrofit a 1 Mt cement plant with full oxy-fuel combustion will cost roughly R1.9 billion (2016). Cement Production capacity of 21.5 Mt/year </td>
-      <td id="T_c29cb_row0_col6" class="data row0 col6" >SATIMGE_Veda\VT_REGION1_ELC.xlsx\ProcDataRECostProfile\G9-L19</td>
+      <th id="T_95619_level0_row0" class="row_heading level0 row0" >0</th>
+      <td id="T_95619_row0_col0" class="data row0 col0" >Capital cost for retrofitting current existing kilns with CCS capture technology</td>
+      <td id="T_95619_row0_col1" class="data row0 col1" >Rather link to cells in location. 2017: 2022 ZAR R/kW</td>
+      <td id="T_95619_row0_col2" class="data row0 col2" >ZAR/t CO2 captured</td>
+      <td id="T_95619_row0_col3" class="data row0 col3" >By 2030, 2040</td>
+      <td id="T_95619_row0_col4" class="data row0 col4" >Department of Mineral Resources and Energy (2019). Integrated Resource Plan (IRP2019). [online] Available at: https://www.energy.gov.za/IRP/2019/IRP-2019.pdf </td>
+      <td id="T_95619_row0_col5" class="data row0 col5" >The capital costs show that to retrofit a 1 Mt cement plant with full oxy-fuel combustion will cost roughly R1.9 billion (2016). Cement Production capacity of 21.5 Mt/year </td>
+      <td id="T_95619_row0_col6" class="data row0 col6" >SATIMGE_Veda\VT_REGION1_ELC.xlsx\ProcDataRECostProfile\G9-L19</td>
     </tr>
     <tr>
-      <th id="T_c29cb_level0_row1" class="row_heading level0 row1" >1</th>
-      <td id="T_c29cb_row1_col0" class="data row1 col0" >Overnight Investment Costs (undiscounted)</td>
-      <td id="T_c29cb_row1_col1" class="data row1 col1" >Rather link to cells in location. 2017:  R/kW</td>
-      <td id="T_c29cb_row1_col2" class="data row1 col2" >2022 ZAR/kW (AC)</td>
-      <td id="T_c29cb_row1_col3" class="data row1 col3" >2017 (base year), 2020, 2025, 2030, 2040, 2050</td>
-      <td id="T_c29cb_row1_col4" class="data row1 col4" >Department of Mineral Resources and Energy (2019). Integrated Resource Plan (IRP2019). [online] Available at: https://www.energy.gov.za/IRP/2019/IRP-2019.pdf </td>
-      <td id="T_c29cb_row1_col5" class="data row1 col5" >eg. Calculations based on  solar cost data […].</td>
-      <td id="T_c29cb_row1_col6" class="data row1 col6" >SATIMGE_Veda\VT_REGION1_ELC.xlsx\ProcDataRECostProfile\G9-L19</td>
+      <th id="T_95619_level0_row1" class="row_heading level0 row1" >1</th>
+      <td id="T_95619_row1_col0" class="data row1 col0" >Overnight Investment Costs (undiscounted)</td>
+      <td id="T_95619_row1_col1" class="data row1 col1" >Rather link to cells in location. 2017:  R/kW</td>
+      <td id="T_95619_row1_col2" class="data row1 col2" >2022 ZAR/kW (AC)</td>
+      <td id="T_95619_row1_col3" class="data row1 col3" >2017 (base year), 2020, 2025, 2030, 2040, 2050</td>
+      <td id="T_95619_row1_col4" class="data row1 col4" >Department of Mineral Resources and Energy (2019). Integrated Resource Plan (IRP2019). [online] Available at: https://www.energy.gov.za/IRP/2019/IRP-2019.pdf </td>
+      <td id="T_95619_row1_col5" class="data row1 col5" >eg. Calculations based on  solar cost data […].</td>
+      <td id="T_95619_row1_col6" class="data row1 col6" >SATIMGE_Veda\VT_REGION1_ELC.xlsx\ProcDataRECostProfile\G9-L19</td>
     </tr>
   </tbody>
 </table>
@@ -611,8 +664,9 @@ document.write(`
 </div>
 </section>
 <section id="attributes-in-the-commercial-sector">
-<h2>12.2 Attributes in the Commercial Sector<a class="headerlink" href="#attributes-in-the-commercial-sector" title="Link to this heading">#</a></h2>
-<p><em>Table 12.4: Attributes commonly used in the Commercial Sector</em></p>
+<h2><a class="toc-backref" href="#id5" role="doc-backlink">12.2 Attributes in the Commercial Sector</a><a class="headerlink" href="#attributes-in-the-commercial-sector" title="Link to this heading">#</a></h2>
+<p>For comprehensive descriptions of each attribute, users may consult the <em>Attribute Master</em> tab in VedaOnline, which provides expanded definitions and specifications. This resource offers valuable insights into the technical characteristics of each attribute used within the SATIM model and beyond.
+<em>Table 12.4: Attributes commonly used in the Commercial Sector</em></p>
 <table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p><strong>Attribute</strong></p></th>
@@ -680,7 +734,7 @@ document.write(`
 </tbody>
 </table>
 <section id="commodities-in-the-commercial-sector">
-<h3>12.3 Commodities in the Commercial Sector<a class="headerlink" href="#commodities-in-the-commercial-sector" title="Link to this heading">#</a></h3>
+<h3><a class="toc-backref" href="#id6" role="doc-backlink">12.3 Commodities in the Commercial Sector</a><a class="headerlink" href="#commodities-in-the-commercial-sector" title="Link to this heading">#</a></h3>
 <p><em>Table 12.2.1: Output Commodities: Commercial End Uses</em></p>
 <table class="table">
 <thead>
@@ -838,7 +892,7 @@ document.write(`
 </section>
 </section>
 <section id="processes-in-the-commercial-sector">
-<h2>12.4 Processes in the Commercial Sector<a class="headerlink" href="#processes-in-the-commercial-sector" title="Link to this heading">#</a></h2>
+<h2><a class="toc-backref" href="#id7" role="doc-backlink">12.4 Processes in the Commercial Sector</a><a class="headerlink" href="#processes-in-the-commercial-sector" title="Link to this heading">#</a></h2>
 <p>In Veda Online, filtering by the following processes in the <em>Browse</em> or <em>Items View</em> tabs will display the data for the attributes and respective years in section 12.4 below:</p>
 <ul class="simple">
 <li><p>FLO_MARK: (description) for years 2017, 2020, 2025, 2030, 2035, 2040, 2045 and 2050.</p></li>
@@ -1590,6 +1644,15 @@ document.write(`
         <p class="prev-next-subtitle">previous</p>
         <p class="prev-next-title">The Residential Sector (Veda Online)</p>
       </div>
+    </a>
+    <a class="right-next"
+       href="13VOTra.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">13 The Transport Sector</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>

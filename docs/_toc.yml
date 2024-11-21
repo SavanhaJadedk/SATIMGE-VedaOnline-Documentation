@@ -5,8 +5,13 @@ chapters:
   - file: 02SATIM Model Structure
   - file: 03eSAGE Model Structure
   - file: 04Model Linkage
-  - file: 10VedaOnline  
+  - file: 10VedaOnline
+  - file: 10.1VONamingConv
   - file: 11VORes
   - file: 12VOCom
+  - file: 13VOTra
+  - file: 14Ind1
+  - file: Annex 1
+  - file: Annex 2
 
 

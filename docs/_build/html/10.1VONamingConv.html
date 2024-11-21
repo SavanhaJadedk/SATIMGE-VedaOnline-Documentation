@@ -62,6 +62,8 @@
     <script>DOCUMENTATION_OPTIONS.pagename = '10.1VONamingConv';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="The Residential Sector (Veda Online)" href="11VORes.html" />
+    <link rel="prev" title="10. Navigating SATIM with Veda Online" href="10VedaOnline.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -123,8 +125,6 @@
       
       
       
-        
-      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -172,13 +172,17 @@
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="02SATIM%20Model%20Structure.html">2. SATIM Model Structure</a></li>
 <li class="toctree-l1"><a class="reference internal" href="03eSAGE%20Model%20Structure.html">3. eSAGE Model Structure</a></li>
 <li class="toctree-l1"><a class="reference internal" href="04Model%20Linkage.html">4. Model Linkage</a></li>
 <li class="toctree-l1"><a class="reference internal" href="10VedaOnline.html">10. Navigating SATIM with Veda Online</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">SATIM Nomenclature and Naming Conventions</a></li>
+
 <li class="toctree-l1"><a class="reference internal" href="11VORes.html">The Residential Sector (Veda Online)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="12VOCom.html">The Commercial Sector (Veda Online)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12VOCom.html">12 The Commercial Sector</a></li>
+<li class="toctree-l1"><a class="reference internal" href="13VOTra.html">13 The Transport Sector</a></li>
+<li class="toctree-l1"><a class="reference internal" href="14Ind1.html">14 The Industrial Sector</a></li>
 </ul>
 
     </div>
@@ -419,15 +423,58 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="satim-nomenclature-and-naming-conventions">
-<h1>SATIM Nomenclature and Naming Conventions<a class="headerlink" href="#satim-nomenclature-and-naming-conventions" title="Link to this heading">#</a></h1>
+<h1><a class="toc-backref" href="#id10" role="doc-backlink">SATIM Nomenclature and Naming Conventions</a><a class="headerlink" href="#satim-nomenclature-and-naming-conventions" title="Link to this heading">#</a></h1>
+<nav class="contents" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#satim-nomenclature-and-naming-conventions" id="id10">SATIM Nomenclature and Naming Conventions</a></p>
+<ul>
+<li><p><a class="reference internal" href="#fuel-naming-convention" id="id11">Fuel Naming Convention</a></p>
+<ul>
+<li><p><a class="reference internal" href="#sector-codes" id="id12">Sector Codes</a></p></li>
+<li><p><a class="reference internal" href="#fuel-codes" id="id13">Fuel Codes</a></p></li>
+<li><p><a class="reference internal" href="#example" id="id14">Example</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#technology-naming-convention" id="id15">Technology Naming Convention</a></p>
+<ul>
+<li><p><a class="reference internal" href="#residential-end-use-codes" id="id16">Residential End-Use Codes</a></p></li>
+<li><p><a class="reference internal" href="#example-technology-identifiers" id="id17">Example Technology Identifiers</a></p></li>
+<li><p><a class="reference internal" href="#special-cases" id="id18">Special Cases</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#accessing-detailed-descriptions-in-vedaonline" id="id19">Accessing Detailed Descriptions in VedaOnline</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#id1" id="id20">SATIM Nomenclature and Naming Conventions</a></p>
+<ul>
+<li><p><a class="reference internal" href="#id2" id="id21">Fuel Naming Convention</a></p>
+<ul>
+<li><p><a class="reference internal" href="#id3" id="id22">Sector Codes</a></p></li>
+<li><p><a class="reference internal" href="#id4" id="id23">Fuel Codes</a></p></li>
+<li><p><a class="reference internal" href="#id5" id="id24">Example</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#id6" id="id25">Technology Naming Convention</a></p>
+<ul>
+<li><p><a class="reference internal" href="#residential-end-use-codes-place-this-in-residential-section" id="id26">Residential End-Use Codes - place this in residential section</a></p></li>
+<li><p><a class="reference internal" href="#id7" id="id27">Example Technology Identifiers</a></p></li>
+<li><p><a class="reference internal" href="#id8" id="id28">Special Cases</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#id9" id="id29">Accessing Detailed Descriptions in VedaOnline</a></p></li>
+</ul>
+</li>
+</ul>
+</nav>
 <p>To facilitate consistent interpretation, the SATIM model employs a systematic nomenclature for fuel and technology codes. This section provides an overview of the naming conventions used, enabling users to decipher these codes effectively.</p>
 <section id="fuel-naming-convention">
-<h2>Fuel Naming Convention<a class="headerlink" href="#fuel-naming-convention" title="Link to this heading">#</a></h2>
+<h2><a class="toc-backref" href="#id11" role="doc-backlink">Fuel Naming Convention</a><a class="headerlink" href="#fuel-naming-convention" title="Link to this heading">#</a></h2>
 <p>Fuel identifiers in SATIM are constructed using a two-component format: the first three letters represent the <strong>sector</strong>, and the last three letters represent the <strong>fuel type</strong>. The following tables outline the codes used for each component.</p>
 <div style="display: flex; justify-content: space-between;">
 <div style="width: 45%;">
 <section id="sector-codes">
-<h3>Sector Codes<a class="headerlink" href="#sector-codes" title="Link to this heading">#</a></h3>
+<h3><a class="toc-backref" href="#id12" role="doc-backlink">Sector Codes</a><a class="headerlink" href="#sector-codes" title="Link to this heading">#</a></h3>
 <table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Code</p></th>
@@ -459,7 +506,7 @@ document.write(`
 <div style="width: 45%;">
 </section>
 <section id="fuel-codes">
-<h3>Fuel Codes<a class="headerlink" href="#fuel-codes" title="Link to this heading">#</a></h3>
+<h3><a class="toc-backref" href="#id13" role="doc-backlink">Fuel Codes</a><a class="headerlink" href="#fuel-codes" title="Link to this heading">#</a></h3>
 <table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Code</p></th>
@@ -488,7 +535,7 @@ document.write(`
 </div>
 </section>
 <section id="example">
-<h3>Example<a class="headerlink" href="#example" title="Link to this heading">#</a></h3>
+<h3><a class="toc-backref" href="#id14" role="doc-backlink">Example</a><a class="headerlink" href="#example" title="Link to this heading">#</a></h3>
 <p>In the fuel code <strong>COMODS</strong>:</p>
 <ul class="simple">
 <li><p><strong>COM</strong> designates the commercial sector.</p></li>
@@ -499,7 +546,7 @@ document.write(`
 </section>
 <hr class="docutils" />
 <section id="technology-naming-convention">
-<h2>Technology Naming Convention<a class="headerlink" href="#technology-naming-convention" title="Link to this heading">#</a></h2>
+<h2><a class="toc-backref" href="#id15" role="doc-backlink">Technology Naming Convention</a><a class="headerlink" href="#technology-naming-convention" title="Link to this heading">#</a></h2>
 <p>Technological identifiers in SATIM are similarly standardized to ensure coherence and ease of reference. Technology codes typically consist of:</p>
 <ul class="simple">
 <li><p>The <strong>first four letters</strong> representing the end-use or application (e.g., space heating, cooking).</p></li>
@@ -509,7 +556,7 @@ document.write(`
 <div style="display: flex; justify-content: space-between;">
 <div style="width: 45%;">
 <section id="residential-end-use-codes">
-<h3>Residential End-Use Codes<a class="headerlink" href="#residential-end-use-codes" title="Link to this heading">#</a></h3>
+<h3><a class="toc-backref" href="#id16" role="doc-backlink">Residential End-Use Codes</a><a class="headerlink" href="#residential-end-use-codes" title="Link to this heading">#</a></h3>
 <p>The table below lists end-use codes specifically for residential technologies:</p>
 <table class="table">
 <thead>
@@ -539,7 +586,7 @@ document.write(`
 <div style="width: 45%;">
 </section>
 <section id="example-technology-identifiers">
-<h3>Example Technology Identifiers<a class="headerlink" href="#example-technology-identifiers" title="Link to this heading">#</a></h3>
+<h3><a class="toc-backref" href="#id17" role="doc-backlink">Example Technology Identifiers</a><a class="headerlink" href="#example-technology-identifiers" title="Link to this heading">#</a></h3>
 <table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Identifier</p></th>
@@ -559,24 +606,24 @@ document.write(`
 </div>
 </section>
 <section id="special-cases">
-<h3>Special Cases<a class="headerlink" href="#special-cases" title="Link to this heading">#</a></h3>
+<h3><a class="toc-backref" href="#id18" role="doc-backlink">Special Cases</a><a class="headerlink" href="#special-cases" title="Link to this heading">#</a></h3>
 <p>Certain exceptions to this convention exist. For instance, specific water heating technologies follow slightly modified naming rules. Details on these exceptions are provided in the associated sectoral documentation.</p>
 </section>
 </section>
 <hr class="docutils" />
 <section id="accessing-detailed-descriptions-in-vedaonline">
-<h2>Accessing Detailed Descriptions in VedaOnline<a class="headerlink" href="#accessing-detailed-descriptions-in-vedaonline" title="Link to this heading">#</a></h2>
+<h2><a class="toc-backref" href="#id19" role="doc-backlink">Accessing Detailed Descriptions in VedaOnline</a><a class="headerlink" href="#accessing-detailed-descriptions-in-vedaonline" title="Link to this heading">#</a></h2>
 <p>For comprehensive descriptions of each technology, users may consult the <em>Attribute Master</em> tab in VedaOnline, which provides expanded definitions and specifications. This resource offers valuable insights into the technical characteristics of each technology code used within the SATIM model.</p>
 </section>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="id1">
-<h1>SATIM Nomenclature and Naming Conventions<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<h1><a class="toc-backref" href="#id20" role="doc-backlink">SATIM Nomenclature and Naming Conventions</a><a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
 <p>To facilitate consistent interpretation, the SATIM model employs a systematic nomenclature for fuel and technology codes. This section provides an overview of the naming conventions used, enabling users to decipher these codes effectively.</p>
 <section id="id2">
-<h2>Fuel Naming Convention<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<h2><a class="toc-backref" href="#id21" role="doc-backlink">Fuel Naming Convention</a><a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
 <p>Fuel identifiers in SATIM are constructed using a two-component format: the first three letters represent the <strong>sector</strong>, and the last three letters represent the <strong>fuel type</strong>. The following tables outline the codes used for each component.</p>
 <section id="id3">
-<h3>Sector Codes<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<h3><a class="toc-backref" href="#id22" role="doc-backlink">Sector Codes</a><a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
 <table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Code</p></th>
@@ -606,7 +653,7 @@ document.write(`
 </table>
 </section>
 <section id="id4">
-<h3>Fuel Codes<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
+<h3><a class="toc-backref" href="#id23" role="doc-backlink">Fuel Codes</a><a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
 <table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Code</p></th>
@@ -633,7 +680,7 @@ document.write(`
 </table>
 </section>
 <section id="id5">
-<h3>Example<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
+<h3><a class="toc-backref" href="#id24" role="doc-backlink">Example</a><a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
 <p>In the fuel code <strong>COMODS</strong>:</p>
 <ul class="simple">
 <li><p><strong>COM</strong> designates the commercial sector.</p></li>
@@ -644,7 +691,7 @@ document.write(`
 </section>
 <hr class="docutils" />
 <section id="id6">
-<h2>Technology Naming Convention<a class="headerlink" href="#id6" title="Link to this heading">#</a></h2>
+<h2><a class="toc-backref" href="#id25" role="doc-backlink">Technology Naming Convention</a><a class="headerlink" href="#id6" title="Link to this heading">#</a></h2>
 <p>Technological identifiers in SATIM are similarly standardized to ensure coherence and ease of reference. Technology codes typically consist of:</p>
 <ul class="simple">
 <li><p>The <strong>first four letters</strong> representing the end-use or application (e.g., space heating, cooking).</p></li>
@@ -652,7 +699,7 @@ document.write(`
 <li><p>Any <strong>subsequent letters</strong> used as descriptors to provide additional technical details.</p></li>
 </ul>
 <section id="residential-end-use-codes-place-this-in-residential-section">
-<h3>Residential End-Use Codes - place this in residential section<a class="headerlink" href="#residential-end-use-codes-place-this-in-residential-section" title="Link to this heading">#</a></h3>
+<h3><a class="toc-backref" href="#id26" role="doc-backlink">Residential End-Use Codes - place this in residential section</a><a class="headerlink" href="#residential-end-use-codes-place-this-in-residential-section" title="Link to this heading">#</a></h3>
 <p>The table below lists end-use codes specifically for residential technologies:</p>
 <table class="table">
 <thead>
@@ -680,7 +727,7 @@ document.write(`
 </table>
 </section>
 <section id="id7">
-<h3>Example Technology Identifiers<a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
+<h3><a class="toc-backref" href="#id27" role="doc-backlink">Example Technology Identifiers</a><a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
 <p>Below are illustrative examples of technology codes based on this convention:</p>
 <ul class="simple">
 <li><p><strong>RHEH_NGS_EFF</strong>: Represents an efficient residential space heating technology that utilizes natural gas as a fuel source.</p></li>
@@ -688,13 +735,13 @@ document.write(`
 </ul>
 </section>
 <section id="id8">
-<h3>Special Cases<a class="headerlink" href="#id8" title="Link to this heading">#</a></h3>
+<h3><a class="toc-backref" href="#id28" role="doc-backlink">Special Cases</a><a class="headerlink" href="#id8" title="Link to this heading">#</a></h3>
 <p>It should be noted that certain exceptions to this convention exist. For instance, specific water heating technologies follow slightly modified naming rules. Details on these exceptions are provided in the associated sectoral documentation.</p>
 </section>
 </section>
 <hr class="docutils" />
 <section id="id9">
-<h2>Accessing Detailed Descriptions in VedaOnline<a class="headerlink" href="#id9" title="Link to this heading">#</a></h2>
+<h2><a class="toc-backref" href="#id29" role="doc-backlink">Accessing Detailed Descriptions in VedaOnline</a><a class="headerlink" href="#id9" title="Link to this heading">#</a></h2>
 <p>For comprehensive descriptions of each technology, users may consult the <em>Attribute Master</em> tab in VedaOnline, which provides expanded definitions and specifications. This resource offers valuable insights into the technical characteristics of each technology code used within the SATIM model.</p>
 </section>
 </section>
@@ -729,6 +776,24 @@ document.write(`
                 <footer class="prev-next-footer">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="10VedaOnline.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">10. Navigating SATIM with Veda Online</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="11VORes.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">The Residential Sector (Veda Online)</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
