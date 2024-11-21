@@ -21,25 +21,25 @@ nbclient.exceptions.CellExecutionError: An error occurred while executing the fo
 from IPython.display import display, Image, Markdown
 
 # Specify the path to your local image file
-image_path = 'WASA_3_Resource_Map_March_2021.png'
+image_path = 'sankey 2017.jpg'
 
 # Display the image
 display(Image(filename=image_path))
 
 # Add a caption using Markdown
-caption = "WASA Resource Map (March 2021). Source:SANEDI (n.d.). Wind Atlas for South Africa (WASA) . [online] www.wasaproject.info. Available at: https://www.wasaproject.info/."
+caption = " SANKEY diagram of the South African Energy System in 2017. This section presents the main databases used to build a representation of this system in SATIM"
 display(Markdown(f"**{caption}**"))
 ------------------
 
 
 [1;31m---------------------------------------------------------------------------[0m
 [1;31mFileNotFoundError[0m                         Traceback (most recent call last)
-Cell [1;32mIn[2], line 7[0m
-[0;32m      4[0m image_path [38;5;241m=[39m [38;5;124m'[39m[38;5;124mWASA_3_Resource_Map_March_2021.png[39m[38;5;124m'[39m
+Cell [1;32mIn[1], line 7[0m
+[0;32m      4[0m image_path [38;5;241m=[39m [38;5;124m'[39m[38;5;124msankey 2017.jpg[39m[38;5;124m'[39m
 [0;32m      6[0m [38;5;66;03m# Display the image[39;00m
 [1;32m----> 7[0m display([43mImage[49m[43m([49m[43mfilename[49m[38;5;241;43m=[39;49m[43mimage_path[49m[43m)[49m)
 [0;32m      9[0m [38;5;66;03m# Add a caption using Markdown[39;00m
-[0;32m     10[0m caption [38;5;241m=[39m [38;5;124m"[39m[38;5;124mWASA Resource Map (March 2021). Source:SANEDI (n.d.). Wind Atlas for South Africa (WASA) . [online] www.wasaproject.info. Available at: https://www.wasaproject.info/.[39m[38;5;124m"[39m
+[0;32m     10[0m caption [38;5;241m=[39m [38;5;124m"[39m[38;5;124m SANKEY diagram of the South African Energy System in 2017. This section presents the main databases used to build a representation of this system in SATIM[39m[38;5;124m"[39m
 
 File [1;32m~\AppData\Roaming\Python\Python311\site-packages\IPython\core\display.py:970[0m, in [0;36mImage.__init__[1;34m(self, data, url, filename, format, embed, width, height, retina, unconfined, metadata, alt)[0m
 [0;32m    968[0m [38;5;28mself[39m[38;5;241m.[39munconfined [38;5;241m=[39m unconfined
@@ -70,5 +70,5 @@ File [1;32m~\AppData\Roaming\Python\Python311\site-packages\IPython\core\displa
 [0;32m    355[0m [38;5;28;01melif[39;00m [38;5;28mself[39m[38;5;241m.[39murl [38;5;129;01mis[39;00m [38;5;129;01mnot[39;00m [38;5;28;01mNone[39;00m:
 [0;32m    356[0m     [38;5;66;03m# Deferred import[39;00m
 
-[1;31mFileNotFoundError[0m: [Errno 2] No such file or directory: 'WASA_3_Resource_Map_March_2021.png'
+[1;31mFileNotFoundError[0m: [Errno 2] No such file or directory: 'sankey 2017.jpg'
 

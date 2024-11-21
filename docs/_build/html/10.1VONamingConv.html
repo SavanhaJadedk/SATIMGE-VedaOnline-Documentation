@@ -1,0 +1,835 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>SATIM Nomenclature and Naming Conventions &#8212; SATIMGE Documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=b3631e0a" />
+    <link rel="stylesheet" type="text/css" href="_static/.ipynb_checkpoints/custom-checkpoint.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '10.1VONamingConv';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="01intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">SATIMGE Documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="01intro.html">
+                    1. Welcome to the read-the-docs for the SATIM-eSAGE linked modelling framework.
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="02SATIM%20Model%20Structure.html">2. SATIM Model Structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03eSAGE%20Model%20Structure.html">3. eSAGE Model Structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04Model%20Linkage.html">4. Model Linkage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10VedaOnline.html">10. Navigating SATIM with Veda Online</a></li>
+<li class="toctree-l1"><a class="reference internal" href="11VORes.html">The Residential Sector (Veda Online)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12VOCom.html">The Commercial Sector (Veda Online)</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2F10.1VONamingConv.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/10.1VONamingConv.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>SATIM Nomenclature and Naming Conventions</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">SATIM Nomenclature and Naming Conventions</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fuel-naming-convention">Fuel Naming Convention</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sector-codes">Sector Codes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fuel-codes">Fuel Codes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example">Example</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#technology-naming-convention">Technology Naming Convention</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#residential-end-use-codes">Residential End-Use Codes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-technology-identifiers">Example Technology Identifiers</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#special-cases">Special Cases</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#accessing-detailed-descriptions-in-vedaonline">Accessing Detailed Descriptions in VedaOnline</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">SATIM Nomenclature and Naming Conventions</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Fuel Naming Convention</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Sector Codes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Fuel Codes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Example</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Technology Naming Convention</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#residential-end-use-codes-place-this-in-residential-section">Residential End-Use Codes - place this in residential section</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Example Technology Identifiers</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Special Cases</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Accessing Detailed Descriptions in VedaOnline</a></li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="satim-nomenclature-and-naming-conventions">
+<h1>SATIM Nomenclature and Naming Conventions<a class="headerlink" href="#satim-nomenclature-and-naming-conventions" title="Link to this heading">#</a></h1>
+<p>To facilitate consistent interpretation, the SATIM model employs a systematic nomenclature for fuel and technology codes. This section provides an overview of the naming conventions used, enabling users to decipher these codes effectively.</p>
+<section id="fuel-naming-convention">
+<h2>Fuel Naming Convention<a class="headerlink" href="#fuel-naming-convention" title="Link to this heading">#</a></h2>
+<p>Fuel identifiers in SATIM are constructed using a two-component format: the first three letters represent the <strong>sector</strong>, and the last three letters represent the <strong>fuel type</strong>. The following tables outline the codes used for each component.</p>
+<div style="display: flex; justify-content: space-between;">
+<div style="width: 45%;">
+<section id="sector-codes">
+<h3>Sector Codes<a class="headerlink" href="#sector-codes" title="Link to this heading">#</a></h3>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Code</p></th>
+<th class="head"><p>Sector</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>RES</p></td>
+<td><p>Residential</p></td>
+</tr>
+<tr class="row-odd"><td><p>COM</p></td>
+<td><p>Commercial</p></td>
+</tr>
+<tr class="row-even"><td><p>IND</p></td>
+<td><p>Industrial</p></td>
+</tr>
+<tr class="row-odd"><td><p>TRA</p></td>
+<td><p>Transport</p></td>
+</tr>
+<tr class="row-even"><td><p>AGR</p></td>
+<td><p>Agriculture</p></td>
+</tr>
+<tr class="row-odd"><td><p>…</p></td>
+<td><p>…</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div style="width: 45%;">
+</section>
+<section id="fuel-codes">
+<h3>Fuel Codes<a class="headerlink" href="#fuel-codes" title="Link to this heading">#</a></h3>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Code</p></th>
+<th class="head"><p>Fuel Type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>ODS</p></td>
+<td><p>Oil Diesel</p></td>
+</tr>
+<tr class="row-odd"><td><p>OGS</p></td>
+<td><p>Oil Gasoline</p></td>
+</tr>
+<tr class="row-even"><td><p>NGS</p></td>
+<td><p>Natural Gas</p></td>
+</tr>
+<tr class="row-odd"><td><p>ELC</p></td>
+<td><p>Electricity</p></td>
+</tr>
+<tr class="row-even"><td><p>…</p></td>
+<td><p>…</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="example">
+<h3>Example<a class="headerlink" href="#example" title="Link to this heading">#</a></h3>
+<p>In the fuel code <strong>COMODS</strong>:</p>
+<ul class="simple">
+<li><p><strong>COM</strong> designates the commercial sector.</p></li>
+<li><p><strong>ODS</strong> denotes oil diesel as the fuel type.</p></li>
+</ul>
+<p>This systematic approach allows users to easily parse and interpret fuel identifiers across various sectors.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="technology-naming-convention">
+<h2>Technology Naming Convention<a class="headerlink" href="#technology-naming-convention" title="Link to this heading">#</a></h2>
+<p>Technological identifiers in SATIM are similarly standardized to ensure coherence and ease of reference. Technology codes typically consist of:</p>
+<ul class="simple">
+<li><p>The <strong>first four letters</strong> representing the end-use or application (e.g., space heating, cooking).</p></li>
+<li><p>The <strong>next three letters</strong> indicating the primary fuel type.</p></li>
+<li><p>Any <strong>subsequent letters</strong> used as descriptors to provide additional technical details.</p></li>
+</ul>
+<div style="display: flex; justify-content: space-between;">
+<div style="width: 45%;">
+<section id="residential-end-use-codes">
+<h3>Residential End-Use Codes<a class="headerlink" href="#residential-end-use-codes" title="Link to this heading">#</a></h3>
+<p>The table below lists end-use codes specifically for residential technologies:</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Code</p></th>
+<th class="head"><p>End-Use</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>RHEH</p></td>
+<td><p>Space Heating</p></td>
+</tr>
+<tr class="row-odd"><td><p>RMEK</p></td>
+<td><p>Cooking</p></td>
+</tr>
+<tr class="row-even"><td><p>RLGT</p></td>
+<td><p>Lighting</p></td>
+</tr>
+<tr class="row-odd"><td><p>RWH</p></td>
+<td><p>Water Heating</p></td>
+</tr>
+<tr class="row-even"><td><p>…</p></td>
+<td><p>…</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div style="width: 45%;">
+</section>
+<section id="example-technology-identifiers">
+<h3>Example Technology Identifiers<a class="headerlink" href="#example-technology-identifiers" title="Link to this heading">#</a></h3>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Identifier</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>RHEH_NGS_EFF</p></td>
+<td><p>Represents an efficient residential space heating technology using natural gas.</p></td>
+</tr>
+<tr class="row-odd"><td><p>RCOK_OGS_STD</p></td>
+<td><p>Refers to a standard residential cooking technology using oil gasoline.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="special-cases">
+<h3>Special Cases<a class="headerlink" href="#special-cases" title="Link to this heading">#</a></h3>
+<p>Certain exceptions to this convention exist. For instance, specific water heating technologies follow slightly modified naming rules. Details on these exceptions are provided in the associated sectoral documentation.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="accessing-detailed-descriptions-in-vedaonline">
+<h2>Accessing Detailed Descriptions in VedaOnline<a class="headerlink" href="#accessing-detailed-descriptions-in-vedaonline" title="Link to this heading">#</a></h2>
+<p>For comprehensive descriptions of each technology, users may consult the <em>Attribute Master</em> tab in VedaOnline, which provides expanded definitions and specifications. This resource offers valuable insights into the technical characteristics of each technology code used within the SATIM model.</p>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1>SATIM Nomenclature and Naming Conventions<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<p>To facilitate consistent interpretation, the SATIM model employs a systematic nomenclature for fuel and technology codes. This section provides an overview of the naming conventions used, enabling users to decipher these codes effectively.</p>
+<section id="id2">
+<h2>Fuel Naming Convention<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<p>Fuel identifiers in SATIM are constructed using a two-component format: the first three letters represent the <strong>sector</strong>, and the last three letters represent the <strong>fuel type</strong>. The following tables outline the codes used for each component.</p>
+<section id="id3">
+<h3>Sector Codes<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Code</p></th>
+<th class="head"><p>Sector</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>RES</p></td>
+<td><p>Residential</p></td>
+</tr>
+<tr class="row-odd"><td><p>COM</p></td>
+<td><p>Commercial</p></td>
+</tr>
+<tr class="row-even"><td><p>IND</p></td>
+<td><p>Industrial</p></td>
+</tr>
+<tr class="row-odd"><td><p>TRA</p></td>
+<td><p>Transport</p></td>
+</tr>
+<tr class="row-even"><td><p>AGR</p></td>
+<td><p>Agriculture</p></td>
+</tr>
+<tr class="row-odd"><td><p>…</p></td>
+<td><p>…</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id4">
+<h3>Fuel Codes<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Code</p></th>
+<th class="head"><p>Fuel Type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>ODS</p></td>
+<td><p>Oil Diesel</p></td>
+</tr>
+<tr class="row-odd"><td><p>OGS</p></td>
+<td><p>Oil Gasoline</p></td>
+</tr>
+<tr class="row-even"><td><p>NGS</p></td>
+<td><p>Natural Gas</p></td>
+</tr>
+<tr class="row-odd"><td><p>ELC</p></td>
+<td><p>Electricity</p></td>
+</tr>
+<tr class="row-even"><td><p>…</p></td>
+<td><p>…</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id5">
+<h3>Example<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
+<p>In the fuel code <strong>COMODS</strong>:</p>
+<ul class="simple">
+<li><p><strong>COM</strong> designates the commercial sector.</p></li>
+<li><p><strong>ODS</strong> denotes oil diesel as the fuel type.</p></li>
+</ul>
+<p>This systematic approach allows users to easily parse and interpret fuel identifiers across various sectors.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="id6">
+<h2>Technology Naming Convention<a class="headerlink" href="#id6" title="Link to this heading">#</a></h2>
+<p>Technological identifiers in SATIM are similarly standardized to ensure coherence and ease of reference. Technology codes typically consist of:</p>
+<ul class="simple">
+<li><p>The <strong>first four letters</strong> representing the end-use or application (e.g., space heating, cooking).</p></li>
+<li><p>The <strong>next three letters</strong> indicating the primary fuel type.</p></li>
+<li><p>Any <strong>subsequent letters</strong> used as descriptors to provide additional technical details.</p></li>
+</ul>
+<section id="residential-end-use-codes-place-this-in-residential-section">
+<h3>Residential End-Use Codes - place this in residential section<a class="headerlink" href="#residential-end-use-codes-place-this-in-residential-section" title="Link to this heading">#</a></h3>
+<p>The table below lists end-use codes specifically for residential technologies:</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Code</p></th>
+<th class="head"><p>End-Use</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>RHEH</p></td>
+<td><p>Space Heating</p></td>
+</tr>
+<tr class="row-odd"><td><p>RMEK</p></td>
+<td><p>Cooking</p></td>
+</tr>
+<tr class="row-even"><td><p>RLGT</p></td>
+<td><p>Lighting</p></td>
+</tr>
+<tr class="row-odd"><td><p>RWH</p></td>
+<td><p>Water Heating</p></td>
+</tr>
+<tr class="row-even"><td><p>…</p></td>
+<td><p>…</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id7">
+<h3>Example Technology Identifiers<a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
+<p>Below are illustrative examples of technology codes based on this convention:</p>
+<ul class="simple">
+<li><p><strong>RHEH_NGS_EFF</strong>: Represents an efficient residential space heating technology that utilizes natural gas as a fuel source.</p></li>
+<li><p><strong>RCOK_OGS_STD</strong>: Refers to a standard residential cooking technology that operates on oil gasoline.</p></li>
+</ul>
+</section>
+<section id="id8">
+<h3>Special Cases<a class="headerlink" href="#id8" title="Link to this heading">#</a></h3>
+<p>It should be noted that certain exceptions to this convention exist. For instance, specific water heating technologies follow slightly modified naming rules. Details on these exceptions are provided in the associated sectoral documentation.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="id9">
+<h2>Accessing Detailed Descriptions in VedaOnline<a class="headerlink" href="#id9" title="Link to this heading">#</a></h2>
+<p>For comprehensive descriptions of each technology, users may consult the <em>Attribute Master</em> tab in VedaOnline, which provides expanded definitions and specifications. This resource offers valuable insights into the technical characteristics of each technology code used within the SATIM model.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">SATIM Nomenclature and Naming Conventions</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fuel-naming-convention">Fuel Naming Convention</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sector-codes">Sector Codes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fuel-codes">Fuel Codes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example">Example</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#technology-naming-convention">Technology Naming Convention</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#residential-end-use-codes">Residential End-Use Codes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-technology-identifiers">Example Technology Identifiers</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#special-cases">Special Cases</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#accessing-detailed-descriptions-in-vedaonline">Accessing Detailed Descriptions in VedaOnline</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">SATIM Nomenclature and Naming Conventions</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Fuel Naming Convention</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Sector Codes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Fuel Codes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Example</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Technology Naming Convention</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#residential-end-use-codes-place-this-in-residential-section">Residential End-Use Codes - place this in residential section</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Example Technology Identifiers</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Special Cases</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Accessing Detailed Descriptions in VedaOnline</a></li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Energy Systems Research Group (ESRG)
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

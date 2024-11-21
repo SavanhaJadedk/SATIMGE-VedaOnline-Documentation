@@ -176,7 +176,7 @@
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">2. SATIM Model Structure</a></li>
 <li class="toctree-l1"><a class="reference internal" href="03eSAGE%20Model%20Structure.html">3. eSAGE Model Structure</a></li>
 <li class="toctree-l1"><a class="reference internal" href="04Model%20Linkage.html">4. Model Linkage</a></li>
-<li class="toctree-l1"><a class="reference internal" href="10VedaOnline.html">10. Navigating SATIMGE with Veda Online</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10VedaOnline.html">10. Navigating SATIM with Veda Online</a></li>
 <li class="toctree-l1"><a class="reference internal" href="11VORes.html">The Residential Sector (Veda Online)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="12VOCom.html">The Commercial Sector (Veda Online)</a></li>
 </ul>
@@ -422,7 +422,7 @@ document.write(`
 <p>The South African TIMES Model (SATIM) is described as a <strong>full sector, national energy system optimization model</strong>. It aims to address the planning problem of meeting projected future energy demand by considering the least-cost energy mix and investment plan over a specific planning horizon. SATIM utilizes a <strong>linear optimization algorithm</strong> to derive the technology and fuel mix that will minimize the total discounted system costs over the planning horizon, subject to imposed constraints,such as CO2 emission limits, reliability constraint limits, and operational limits, among others.</p>
 <section id="general-model-structure">
 <h2>2.1. General Model Structure<a class="headerlink" href="#general-model-structure" title="Link to this heading">#</a></h2>
-<p><img alt="Alt text" src="_images/image-3.png" /><em>Simple Schematic of the South Africa Times Model.</em></p>
+<p><img alt="Alt text" src="image-3.png" /><em>Simple Schematic of the South Africa Times Model.</em></p>
 <p>Within SATIM, there are three supply sectors <strong>(electricity and liquid fuels)</strong> and five demand sectors <strong>(industry, agriculture, residential, commercial, and transport)</strong>.</p>
 <p>Each sector undergoes further disaggregation into appropriate subsectors. This detailed representation of both supply and demand sectors explicitly captures the impact of structural changes in the economy, such as varying sector growth rates, process modifications, fuel and mode switching, and advancements in technology and efficiency gains. SATIM governs each demand sector through a set of parameters and general assumptions. These include considerations for the sector’s structure and energy service needs, the base-year demand for energy by fuel type, technical and cost parameters of available technologies, and the forecasted demand for energy services over the planning horizon.</p>
 </section>
@@ -493,7 +493,7 @@ document.write(`
 <section id="model-structure">
 <h4>Model Structure<a class="headerlink" href="#model-structure" title="Link to this heading">#</a></h4>
 <p>The power sector is split into Generation, Transmission and Distribution. In SATIM, the Generation component is modelled in the most detail. Since the country is modelled as a single node, transmission is modelled as a single technology linking centralised/high voltage electricity (ELCC) to medium voltage levels (ELC). The medium voltage electricity is distributed to each sector using a different technology to capture the different losses incurred in the different sectors. This is depicted in the figure 1 below. Note that for purposes of simplicity, the supply technologies and sector distribution legs have been shown in aggregate form.</p>
-<p><img alt="alt text" src="_images/image.png" /></p>
+<p><img alt="alt text" src="image.png" /></p>
 <p><em>Figure 1: Simple Schematic of the Electricity Supply Sector in SATIM.</em></p>
 <p>Technologies such as pumped storage are modeled as consuming power from the transmission system and feeding output back into the system; cogeneration options are modeled after transmission and feed power back onto the grid at that point (industrial electricity demand), and also generate heat which contributes to the industrial heat demand. Aggregate losses are modeled for transmission and distribution. The model is a one-region model and so there is no impact on results from shifting generation from current locations to more dispersed locations (for instance as a result of developing a significant amount of renewable energy capacity). The structure and assumptions underlying the transmission, distribution and generation components of SATIM are briefly discussed below.</p>
 </section>
@@ -600,7 +600,7 @@ document.write(`
 </tbody>
 </table>
 <p><strong>Refurbishment/retirement profile:</strong></p>
-<p><img alt="alt text" src="_images/image-1.png" />
+<p><img alt="alt text" src="image-1.png" />
 <em>Figure 2. Eskom decommissioning and retrofitting schedule</em></p>
 <p>Operating power plants are represented individually and the power sector in SATIM therefore includes the expected decommissioning schedule of coal fired power plants,all planned new builds, planned retrofits as well as plant technology characteristics (efficiency, capacity factors etc). The expected decommissioning schedule of the existing coal fleet, air quality plant retrofit schedules for fabric filter plants (FFP) and low NOx burners (LNB) are assumed to follow the ESKOM decommissioning
 schedule represented in Table X,although it is possible to run scenarios with endogenous retirement of existing and new coal power plants. Flue gas desulfurization (FGD) retrofits are not accounted for. Medupi and Kusile are decommissioned after 2050 which falls outside of the planning window.</p>
@@ -628,7 +628,7 @@ schedule represented in Table X,although it is possible to run scenarios with en
 </section>
 <section id="additional-parameterization-for-existing-pump-storage-systems">
 <h4>Additional Parameterization for Existing Pump Storage Systems<a class="headerlink" href="#additional-parameterization-for-existing-pump-storage-systems" title="Link to this heading">#</a></h4>
-<p><img alt="alt text" src="_images/image-2.png" />
+<p><img alt="alt text" src="image-2.png" />
 <em>Figure 3. Schematic of Pump Storage System Representation in SATIM</em></p>
 <table class="table">
 <thead>

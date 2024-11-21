@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>10. Navigating SATIMGE with Veda Online &#8212; SATIMGE Documentation</title>
+    <title>10. Navigating SATIM with Veda Online &#8212; SATIMGE Documentation</title>
   
   
   
@@ -176,7 +176,7 @@
 <li class="toctree-l1"><a class="reference internal" href="02SATIM%20Model%20Structure.html">2. SATIM Model Structure</a></li>
 <li class="toctree-l1"><a class="reference internal" href="03eSAGE%20Model%20Structure.html">3. eSAGE Model Structure</a></li>
 <li class="toctree-l1"><a class="reference internal" href="04Model%20Linkage.html">4. Model Linkage</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">10. Navigating SATIMGE with Veda Online</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">10. Navigating SATIM with Veda Online</a></li>
 <li class="toctree-l1"><a class="reference internal" href="11VORes.html">The Residential Sector (Veda Online)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="12VOCom.html">The Commercial Sector (Veda Online)</a></li>
 </ul>
@@ -364,7 +364,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>10. Navigating SATIMGE with Veda Online</h1>
+    <h1>10. Navigating SATIM with Veda Online</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -376,16 +376,15 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#retrieving-satimge-input-data">10.1 Retrieving SATIMGE Input Data</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#accessing-veda-online">10.1.1 Accessing Veda Online</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-the-browse-tab">10.1.2 Using the “Browse” Tab</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#filtering-by-process">10.1.3 Filtering by Process</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#filtering-by-commodity">10.1.4 Filtering by Commodity</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#filtering-by-attributes-and-user-constraints">10.1.5 Filtering by Attributes and User Constraints</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exporting-or-downloading-data">10.1.6 Exporting or Downloading Data</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-filters-and-selected-parameters">10.1.7 Example Filters and Selected Parameters</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#generating-retreiving-res-diagrams">10.1.8 Generating(/Retreiving) RES Diagrams</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#generating-retreiving-sankeys">10.1.8 Generating(/Retreiving) Sankeys</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#overview-of-veda-online-tabs">10.1.2 Overview of Veda Online Tabs</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-the-browse-tab">10.1.3 Using the Browse Tab</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#filtering-options-in-veda-online">10.1.4 Filtering Options in Veda Online</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exporting-data">10.1.5 Exporting Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#generating-sankey-diagrams-in-veda-online">10.1.6 Generating Sankey Diagrams in Veda Online</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#retrieving-res-diagrams">10.1.7 Retrieving RES Diagrams</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#accessing-detailed-descriptions-in-vedaonline">Accessing Detailed Descriptions in VedaOnline</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#veda-online-satimge-attributes-dictionary">10.2 Veda Online SATIMGE Attributes Dictionary</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#veda-online-satimge-user-constraints-dictionary">10.2. Veda Online SATIMGE User Constraints Dictionary</a></li>
 </ul>
@@ -399,26 +398,63 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="navigating-satimge-with-veda-online">
-<h1>10. Navigating SATIMGE with Veda Online<a class="headerlink" href="#navigating-satimge-with-veda-online" title="Link to this heading">#</a></h1>
-<section id="retrieving-satimge-input-data">
-<h2>10.1 Retrieving SATIMGE Input Data<a class="headerlink" href="#retrieving-satimge-input-data" title="Link to this heading">#</a></h2>
-<p>Accessing SATIMGE data on Veda Online allows users to filter by scenarios, processes, commodities, attributes, and user constraints. Follow these steps to efficiently retrieve the specific input data required for the SATIMGE model.</p>
-<section id="accessing-veda-online">
-<h3>10.1.1 Accessing Veda Online<a class="headerlink" href="#accessing-veda-online" title="Link to this heading">#</a></h3>
+  <section class="tex2jax_ignore mathjax_ignore" id="navigating-satim-with-veda-online">
+<h1><a class="toc-backref" href="#id1" role="doc-backlink">10. Navigating SATIM with Veda Online</a><a class="headerlink" href="#navigating-satim-with-veda-online" title="Link to this heading">#</a></h1>
+<nav class="contents" id="contents">
+<p class="topic-title">Contents</p>
 <ul class="simple">
-<li><p>Navigate to the Veda Online platform: <a class="reference external" href="https://vedaonline.cloud/Home.aspx">https://vedaonline.cloud/Home.aspx</a>.</p></li>
-<li><p>In the left panel, look for <strong>public models</strong> and select <strong>brunom’s models</strong>.</p></li>
-<li><p>Choose the <strong>SATIMGE</strong> model to begin.</p></li>
-<li><p>SATIMGE Veda Online quick link: <a class="reference external" href="https://vedaonline.cloud/ModelPage.aspx">https://vedaonline.cloud/ModelPage.aspx</a></p></li>
+<li><p><a class="reference internal" href="#navigating-satim-with-veda-online" id="id1">10. Navigating SATIM with Veda Online</a></p>
+<ul>
+<li><p><a class="reference internal" href="#retrieving-satimge-input-data" id="id2">10.1 Retrieving SATIMGE Input Data</a></p>
+<ul>
+<li><p><a class="reference internal" href="#accessing-veda-online" id="id3">10.1.1 Accessing Veda Online</a></p></li>
+<li><p><a class="reference internal" href="#overview-of-veda-online-tabs" id="id4">10.1.2 Overview of Veda Online Tabs</a></p></li>
+<li><p><a class="reference internal" href="#using-the-browse-tab" id="id5">10.1.3 Using the Browse Tab</a></p></li>
+<li><p><a class="reference internal" href="#filtering-options-in-veda-online" id="id6">10.1.4 Filtering Options in Veda Online</a></p></li>
+<li><p><a class="reference internal" href="#exporting-data" id="id7">10.1.5 Exporting Data</a></p></li>
+<li><p><a class="reference internal" href="#generating-sankey-diagrams-in-veda-online" id="id8">10.1.6 Generating Sankey Diagrams in Veda Online</a></p></li>
+<li><p><a class="reference internal" href="#retrieving-res-diagrams" id="id9">10.1.7 Retrieving RES Diagrams</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#accessing-detailed-descriptions-in-vedaonline" id="id10">Accessing Detailed Descriptions in VedaOnline</a></p></li>
+<li><p><a class="reference internal" href="#veda-online-satimge-attributes-dictionary" id="id11">10.2 Veda Online SATIMGE Attributes Dictionary</a></p></li>
+<li><p><a class="reference internal" href="#veda-online-satimge-user-constraints-dictionary" id="id12">10.2. Veda Online SATIMGE User Constraints Dictionary</a></p></li>
+</ul>
+</li>
+</ul>
+</nav>
+<section id="retrieving-satimge-input-data">
+<h2><a class="toc-backref" href="#id2" role="doc-backlink">10.1 Retrieving SATIMGE Input Data</a><a class="headerlink" href="#retrieving-satimge-input-data" title="Link to this heading">#</a></h2>
+<p>Efficient retrieval of SATIMGE input data from Veda Online requires an understanding of the platform’s navigation and filtering capabilities. The steps below provide a guide for accessing and refining the required data while highlighting the key features of Veda Online. For more detailed guidance on Veda Online features, refer to the <a class="reference external" href="https://vedaonline-documentation.readthedocs.io/en/latest/index.html">Veda Online Documentation</a>.</p>
+<hr class="docutils" />
+<section id="accessing-veda-online">
+<h3><a class="toc-backref" href="#id3" role="doc-backlink">10.1.1 Accessing Veda Online</a><a class="headerlink" href="#accessing-veda-online" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Visit <a class="reference external" href="https://vedaonline.cloud/Home.aspx">Veda Online</a>, locate <strong>public models</strong> in the left panel, and select <strong>brunom’s models</strong> &gt; <strong>SATIMGE</strong>.</p></li>
+<li><p>Direct link: <a class="reference external" href="https://vedaonline.cloud/ModelPage.aspx">SATIMGE on Veda Online</a>.</p></li>
 </ul>
 </section>
-<section id="using-the-browse-tab">
-<h3>10.1.2 Using the “Browse” Tab<a class="headerlink" href="#using-the-browse-tab" title="Link to this heading">#</a></h3>
+<hr class="docutils" />
+<section id="overview-of-veda-online-tabs">
+<h3><a class="toc-backref" href="#id4" role="doc-backlink">10.1.2 Overview of Veda Online Tabs</a><a class="headerlink" href="#overview-of-veda-online-tabs" title="Link to this heading">#</a></h3>
+<p>Veda Online provides several key tabs for navigating and interacting with model data:</p>
 <ul class="simple">
-<li><p>The Browse Tab provides a tabular view of the input data across all Excel files.</p></li>
-<li><p>Once inside the SATIMGE model, click on the <strong>Browse</strong> tab located in the top navigation bar.</p></li>
-<li><p>From here, you will have access to several filters, allowing you to narrow down your data search by:</p>
+<li><p><strong>Navigator</strong>: Displays all Excel files included in the SATIMGE model. Use this tab to verify model structure and file inclusion.</p></li>
+<li><p><strong>Browse</strong>: Offers a tabular view of all input data across the Excel files. This is a primary tab for filtering and reviewing data inputs.</p></li>
+<li><p><strong>Items Detail</strong>: Shows the topology and input parameters for individual items, enabling detailed inspection.</p></li>
+<li><p><strong>Attribute Master</strong>: Provides a comprehensive view of attributes for model items, including topology and parameters.</p></li>
+<li><p><strong>Run Manager</strong>: Allows users to define and execute scenarios or cases for the SATIMGE model.</p></li>
+<li><p><strong>Results</strong>: Enables users to analyze outputs from completed model runs.</p></li>
+<li><p><strong>Reports</strong>: Facilitates further analysis of model outputs, including Sankey diagrams and other advanced visualizations.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="using-the-browse-tab">
+<h3><a class="toc-backref" href="#id5" role="doc-backlink">10.1.3 Using the Browse Tab</a><a class="headerlink" href="#using-the-browse-tab" title="Link to this heading">#</a></h3>
+<p>The <strong>Browse</strong> tab is central to data retrieval in Veda Online. It displays input data from all associated Excel files in a tabular format. Once in the SATIMGE model:</p>
+<ul class="simple">
+<li><p>Open the <strong>Browse</strong> tab from the top navigation bar.</p></li>
+<li><p>Apply filters to refine your view by:</p>
 <ul>
 <li><p><strong>Scenario</strong></p></li>
 <li><p><strong>Process</strong></p></li>
@@ -429,72 +465,78 @@ document.write(`
 </li>
 </ul>
 </section>
-<section id="filtering-by-process">
-<h3>10.1.3 Filtering by Process<a class="headerlink" href="#filtering-by-process" title="Link to this heading">#</a></h3>
-<p>You can filter data by sector or subsector using the <strong>Process</strong> filter, which includes the following:</p>
+<hr class="docutils" />
+<section id="filtering-options-in-veda-online">
+<h3><a class="toc-backref" href="#id6" role="doc-backlink">10.1.4 Filtering Options in Veda Online</a><a class="headerlink" href="#filtering-options-in-veda-online" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p><strong>Filtering by Process</strong>:</p>
 <ul class="simple">
-<li><p><strong>Main Demand Sectors</strong>:</p>
+<li><p>Use the <strong>Process</strong> filter to sort data by main sectors, including:</p>
 <ul>
-<li><p>Residential</p></li>
-<li><p>Commerce</p></li>
-<li><p>Transport</p></li>
-<li><p>Industry</p></li>
+<li><p>Residential, Commercial, Transport, Industry.</p></li>
 </ul>
 </li>
-<li><p><strong>Other Sectors and Subsectors</strong>:</p>
-<ul>
-<li><p>Imports</p></li>
-<li><p>Exports</p></li>
-<li><p>Agriculture</p></li>
-<li><p>Power</p></li>
+<li><p>Additional sectors, such as Imports, Exports, Agriculture, and Power, can also be filtered.</p></li>
 </ul>
 </li>
-</ul>
-</section>
-<section id="filtering-by-commodity">
-<h3>10.1.4 Filtering by Commodity<a class="headerlink" href="#filtering-by-commodity" title="Link to this heading">#</a></h3>
-<p>The <strong>Commodity</strong> filter enables users to search for commodities relevant to different sectors:</p>
+<li><p><strong>Filtering by Commodity</strong>:</p>
 <ul class="simple">
-<li><p><strong>Residential Commodities</strong>: Use the wildcard <code class="docutils literal notranslate"><span class="pre">R*</span></code> to search for all residential commodities.</p></li>
-<li><p><strong>Commercial Commodities</strong>: Search with <code class="docutils literal notranslate"><span class="pre">C*</span></code> to retrieve all commodities related to the commercial sector.</p></li>
-<li><p><strong>Transport Commodities</strong>: Use <code class="docutils literal notranslate"><span class="pre">T*</span></code> to find transport sector-related commodities.</p></li>
-<li><p>For specific commodities, use the exact commodity code or refer to the breakdown provided for each sector in this documentation.</p></li>
-</ul>
-</section>
-<section id="filtering-by-attributes-and-user-constraints">
-<h3>10.1.5 Filtering by Attributes and User Constraints<a class="headerlink" href="#filtering-by-attributes-and-user-constraints" title="Link to this heading">#</a></h3>
-<p>In addition to filtering by process and commodity, users can filter by <strong>Attributes</strong> or <strong>User Constraints</strong>:</p>
-<ul class="simple">
-<li><p><strong>Attributes</strong>: This includes parameters like <strong>ACT_COST</strong>, <strong>FLO_MARK</strong>, <strong>EFF</strong>, and others specific to each sector.</p></li>
-<li><p><strong>User Constraints</strong>: These allow users to apply specific limits or requirements to the model inputs.</p></li>
-</ul>
-</section>
-<section id="exporting-or-downloading-data">
-<h3>10.1.6 Exporting or Downloading Data<a class="headerlink" href="#exporting-or-downloading-data" title="Link to this heading">#</a></h3>
-<ul class="simple">
-<li><p>Once you’ve applied the necessary filters, you can download the model version and scenario-specific data:</p>
+<li><p>Target sector-specific commodities using the <strong>Commodity</strong> filter:</p>
 <ul>
-<li><p><strong>Excel file</strong> or <strong>CSV</strong> format.</p></li>
-<li><p>Alternatively, Veda Online provides a link to the model’s <strong>GitHub</strong> repository, where users can access the actual input files directly.</p></li>
+<li><p><strong>Residential</strong>: Use wildcard <code class="docutils literal notranslate"><span class="pre">R*</span></code>.</p></li>
+<li><p><strong>Commercial</strong>: Use <code class="docutils literal notranslate"><span class="pre">C*</span></code>.</p></li>
+<li><p><strong>Transport</strong>: Use <code class="docutils literal notranslate"><span class="pre">T*</span></code>.</p></li>
 </ul>
 </li>
+<li><p>For exact matches, refer to the detailed commodity codes in this documentation.</p></li>
+</ul>
+</li>
+<li><p><strong>Filtering by Attributes and User Constraints</strong>:</p>
+<ul class="simple">
+<li><p><strong>Attributes</strong>: Filter by parameters such as <strong>ACT_COST</strong>, <strong>FLO_MARK</strong>, and <strong>EFF</strong>, tailored to each sector.</p></li>
+<li><p><strong>User Constraints</strong>: Define specific limits or requirements for the model inputs.</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<hr class="docutils" />
+<section id="exporting-data">
+<h3><a class="toc-backref" href="#id7" role="doc-backlink">10.1.5 Exporting Data</a><a class="headerlink" href="#exporting-data" title="Link to this heading">#</a></h3>
+<p>After applying filters, users can export the scenario-specific data:</p>
+<ul class="simple">
+<li><p>Available formats include <strong>Excel</strong> and <strong>CSV</strong>.</p></li>
+<li><p>Alternatively, access the <strong>GitHub repository</strong> for direct retrieval of input files: <a class="reference external" href="https://github.com/brunomerven/SATIMGE">SATIMGE Repository</a>.</p></li>
 </ul>
 </section>
-<section id="example-filters-and-selected-parameters">
-<h3>10.1.7 Example Filters and Selected Parameters<a class="headerlink" href="#example-filters-and-selected-parameters" title="Link to this heading">#</a></h3>
-<p>For each sector, this documentation provides an example of filters and selected parameters, guiding users on how to filter data efficiently. These examples can be used to locate specific model inputs or constraints for your analysis.</p>
+<hr class="docutils" />
+<section id="generating-sankey-diagrams-in-veda-online">
+<h3><a class="toc-backref" href="#id8" role="doc-backlink">10.1.6 Generating Sankey Diagrams in Veda Online</a><a class="headerlink" href="#generating-sankey-diagrams-in-veda-online" title="Link to this heading">#</a></h3>
+<p>The <strong>Reports</strong> tab supports the generation of Sankey diagrams for visualizing energy flows:</p>
+<ol class="arabic simple">
+<li><p>Open the <strong>Reports</strong> tab.</p></li>
+<li><p>Under the <strong>ATTRIBUTE</strong> icon, select the desired Sankey option based on level and sector, then click <strong>Get Data</strong>.</p></li>
+<li><p>Use the <strong>Layout</strong> icon to define source-target relationships and update the table.</p></li>
+<li><p>Toggle between <strong>Table</strong>, <strong>Sankey</strong>, or <strong>SankeyWithLoops</strong> views to generate the diagram.</p></li>
+</ol>
 </section>
-<section id="generating-retreiving-res-diagrams">
-<h3>10.1.8 Generating(/Retreiving) RES Diagrams<a class="headerlink" href="#generating-retreiving-res-diagrams" title="Link to this heading">#</a></h3>
-<p>TBD</p>
+<hr class="docutils" />
+<section id="retrieving-res-diagrams">
+<h3><a class="toc-backref" href="#id9" role="doc-backlink">10.1.7 Retrieving RES Diagrams</a><a class="headerlink" href="#retrieving-res-diagrams" title="Link to this heading">#</a></h3>
+<p>To retrieve RES diagrams for the SATIM model:</p>
+<ol class="arabic simple">
+<li><p>Access the SATIMGE repository: <a class="github reference external" href="https://github.com/brunomerven/SATIMGE">brunomerven/SATIMGE</a>.</p></li>
+<li><p>Locate the appropriate workbook for the sector (e.g., <code class="docutils literal notranslate"><span class="pre">vt_REGION_IND-PP</span></code>).</p></li>
+<li><p>Open the sheet labeled <strong>RES</strong> within the workbook to view the structural layout.</p></li>
+</ol>
 </section>
-<section id="generating-retreiving-sankeys">
-<h3>10.1.8 Generating(/Retreiving) Sankeys<a class="headerlink" href="#generating-retreiving-sankeys" title="Link to this heading">#</a></h3>
-<p>TBD</p>
 </section>
+<hr class="docutils" />
+<section id="accessing-detailed-descriptions-in-vedaonline">
+<h2><a class="toc-backref" href="#id10" role="doc-backlink">Accessing Detailed Descriptions in VedaOnline</a><a class="headerlink" href="#accessing-detailed-descriptions-in-vedaonline" title="Link to this heading">#</a></h2>
+<p>For comprehensive descriptions of each technology, users may consult the <em>Attribute Master</em> tab in VedaOnline, which provides expanded definitions and specifications. This resource offers valuable insights into the technical characteristics of each technology code used within the SATIM model.</p>
 </section>
 <section id="veda-online-satimge-attributes-dictionary">
-<h2>10.2 Veda Online SATIMGE Attributes Dictionary<a class="headerlink" href="#veda-online-satimge-attributes-dictionary" title="Link to this heading">#</a></h2>
+<h2><a class="toc-backref" href="#id11" role="doc-backlink">10.2 Veda Online SATIMGE Attributes Dictionary</a><a class="headerlink" href="#veda-online-satimge-attributes-dictionary" title="Link to this heading">#</a></h2>
 <table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p><strong>Attribute</strong></p></th>
@@ -731,7 +773,7 @@ document.write(`
 </table>
 </section>
 <section id="veda-online-satimge-user-constraints-dictionary">
-<h2>10.2. Veda Online SATIMGE User Constraints Dictionary<a class="headerlink" href="#veda-online-satimge-user-constraints-dictionary" title="Link to this heading">#</a></h2>
+<h2><a class="toc-backref" href="#id12" role="doc-backlink">10.2. Veda Online SATIMGE User Constraints Dictionary</a><a class="headerlink" href="#veda-online-satimge-user-constraints-dictionary" title="Link to this heading">#</a></h2>
 <table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p><strong>User Constraint</strong></p></th>
@@ -1056,16 +1098,15 @@ document.write(`
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#retrieving-satimge-input-data">10.1 Retrieving SATIMGE Input Data</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#accessing-veda-online">10.1.1 Accessing Veda Online</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-the-browse-tab">10.1.2 Using the “Browse” Tab</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#filtering-by-process">10.1.3 Filtering by Process</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#filtering-by-commodity">10.1.4 Filtering by Commodity</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#filtering-by-attributes-and-user-constraints">10.1.5 Filtering by Attributes and User Constraints</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exporting-or-downloading-data">10.1.6 Exporting or Downloading Data</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-filters-and-selected-parameters">10.1.7 Example Filters and Selected Parameters</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#generating-retreiving-res-diagrams">10.1.8 Generating(/Retreiving) RES Diagrams</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#generating-retreiving-sankeys">10.1.8 Generating(/Retreiving) Sankeys</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#overview-of-veda-online-tabs">10.1.2 Overview of Veda Online Tabs</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-the-browse-tab">10.1.3 Using the Browse Tab</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#filtering-options-in-veda-online">10.1.4 Filtering Options in Veda Online</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exporting-data">10.1.5 Exporting Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#generating-sankey-diagrams-in-veda-online">10.1.6 Generating Sankey Diagrams in Veda Online</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#retrieving-res-diagrams">10.1.7 Retrieving RES Diagrams</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#accessing-detailed-descriptions-in-vedaonline">Accessing Detailed Descriptions in VedaOnline</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#veda-online-satimge-attributes-dictionary">10.2 Veda Online SATIMGE Attributes Dictionary</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#veda-online-satimge-user-constraints-dictionary">10.2. Veda Online SATIMGE User Constraints Dictionary</a></li>
 </ul>

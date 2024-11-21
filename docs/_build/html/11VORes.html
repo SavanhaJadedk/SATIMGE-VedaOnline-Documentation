@@ -63,7 +63,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="The Commercial Sector (Veda Online)" href="12VOCom.html" />
-    <link rel="prev" title="10. Navigating SATIMGE with Veda Online" href="10VedaOnline.html" />
+    <link rel="prev" title="10. Navigating SATIM with Veda Online" href="10VedaOnline.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -176,7 +176,7 @@
 <li class="toctree-l1"><a class="reference internal" href="02SATIM%20Model%20Structure.html">2. SATIM Model Structure</a></li>
 <li class="toctree-l1"><a class="reference internal" href="03eSAGE%20Model%20Structure.html">3. eSAGE Model Structure</a></li>
 <li class="toctree-l1"><a class="reference internal" href="04Model%20Linkage.html">4. Model Linkage</a></li>
-<li class="toctree-l1"><a class="reference internal" href="10VedaOnline.html">10. Navigating SATIMGE with Veda Online</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10VedaOnline.html">10. Navigating SATIM with Veda Online</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">The Residential Sector (Veda Online)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="12VOCom.html">The Commercial Sector (Veda Online)</a></li>
 </ul>
@@ -376,7 +376,12 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modelling-structure">11.1 Modelling Structure</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#navigating-the-residential-sector-with-veda-online">11.2 Navigating the Residential Sector with Veda Online</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#commodities-in-the-residential-sector">11.3 Commodities in the Residential Sector</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#commodities-in-the-residential-sector">11.3 Commodities in the Residential Sector</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#residential-end-use-codes">Residential End-Use Codes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-technology-identifiers">Example Technology Identifiers</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#special-cases">Special Cases</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#processes-in-the-residential-sector">11.4 Processes in the Residential Sector</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-sources">Data Sources</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#editors-notes">Editors Notes:</a></li>
@@ -703,6 +708,60 @@ document.write(`
 </tr>
 </tbody>
 </table>
+<section id="residential-end-use-codes">
+<h3>Residential End-Use Codes<a class="headerlink" href="#residential-end-use-codes" title="Link to this heading">#</a></h3>
+<p>The table below lists end-use codes specifically for residential technologies:</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Code</p></th>
+<th class="head"><p>End-Use</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>RHEH</p></td>
+<td><p>Space Heating</p></td>
+</tr>
+<tr class="row-odd"><td><p>RMEK</p></td>
+<td><p>Cooking</p></td>
+</tr>
+<tr class="row-even"><td><p>RLGT</p></td>
+<td><p>Lighting</p></td>
+</tr>
+<tr class="row-odd"><td><p>RWH</p></td>
+<td><p>Water Heating</p></td>
+</tr>
+<tr class="row-even"><td><p>…</p></td>
+<td><p>…</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div style="width: 45%;">
+</section>
+<section id="example-technology-identifiers">
+<h3>Example Technology Identifiers<a class="headerlink" href="#example-technology-identifiers" title="Link to this heading">#</a></h3>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Identifier</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>RHEH_NGS_EFF</p></td>
+<td><p>Represents an efficient residential space heating technology using natural gas.</p></td>
+</tr>
+<tr class="row-odd"><td><p>RCOK_OGS_STD</p></td>
+<td><p>Refers to a standard residential cooking technology using oil gasoline.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="special-cases">
+<h3>Special Cases<a class="headerlink" href="#special-cases" title="Link to this heading">#</a></h3>
+<p>Certain exceptions to this convention exist. For instance, specific water heating technologies follow slightly modified naming rules. Details on these exceptions are provided below</p>
+</section>
 </section>
 <section id="processes-in-the-residential-sector">
 <h2>11.4 Processes in the Residential Sector<a class="headerlink" href="#processes-in-the-residential-sector" title="Link to this heading">#</a></h2>
@@ -1339,7 +1398,6 @@ document.write(`
 <h3 class="rubric" id="to-do"><strong>To Do</strong>:</h3>
 <ul class="simple">
 <li><p>Include concise RES diagram</p></li>
-<li><p>Describe how to access sankeys and res diagrams.</p></li>
 <li><p>brief descriptions above each section</p></li>
 <li><p>decide on numbering/headings/formatting convention</p></li>
 </ul>
@@ -1384,7 +1442,7 @@ document.write(`
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">10. Navigating SATIMGE with Veda Online</p>
+        <p class="prev-next-title">10. Navigating SATIM with Veda Online</p>
       </div>
     </a>
     <a class="right-next"
@@ -1414,7 +1472,12 @@ document.write(`
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modelling-structure">11.1 Modelling Structure</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#navigating-the-residential-sector-with-veda-online">11.2 Navigating the Residential Sector with Veda Online</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#commodities-in-the-residential-sector">11.3 Commodities in the Residential Sector</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#commodities-in-the-residential-sector">11.3 Commodities in the Residential Sector</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#residential-end-use-codes">Residential End-Use Codes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-technology-identifiers">Example Technology Identifiers</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#special-cases">Special Cases</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#processes-in-the-residential-sector">11.4 Processes in the Residential Sector</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-sources">Data Sources</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#editors-notes">Editors Notes:</a></li>

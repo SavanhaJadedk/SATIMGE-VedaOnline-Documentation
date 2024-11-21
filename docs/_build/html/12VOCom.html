@@ -175,7 +175,7 @@
 <li class="toctree-l1"><a class="reference internal" href="02SATIM%20Model%20Structure.html">2. SATIM Model Structure</a></li>
 <li class="toctree-l1"><a class="reference internal" href="03eSAGE%20Model%20Structure.html">3. eSAGE Model Structure</a></li>
 <li class="toctree-l1"><a class="reference internal" href="04Model%20Linkage.html">4. Model Linkage</a></li>
-<li class="toctree-l1"><a class="reference internal" href="10VedaOnline.html">10. Navigating SATIMGE with Veda Online</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10VedaOnline.html">10. Navigating SATIM with Veda Online</a></li>
 <li class="toctree-l1"><a class="reference internal" href="11VORes.html">The Residential Sector (Veda Online)</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">The Commercial Sector (Veda Online)</a></li>
 </ul>
@@ -374,11 +374,15 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modelling-structure">12.1 Modelling Structure</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#commodities-in-the-commercial-sector">12.2 Commodities in the Commercial Sector</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#res-diagram-for-the-commercial-sector">RES Diagram for the Commercial Sector</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#processes-in-the-commercial-sector">12.3 Processes in the Commercial Sector</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#attributes-in-the-commercial-sector">12.4 Attributes in the Commercial Sector</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#table-x-key-references-from-the-commercial-sector">Table x: Key References from the Commercial Sector</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#attributes-in-the-commercial-sector">12.2 Attributes in the Commercial Sector</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#commodities-in-the-commercial-sector">12.3 Commodities in the Commercial Sector</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#processes-in-the-commercial-sector">12.4 Processes in the Commercial Sector</a></li>
 </ul>
             </nav>
         </div>
@@ -395,8 +399,288 @@ document.write(`
 <section id="modelling-structure">
 <h2>12.1 Modelling Structure<a class="headerlink" href="#modelling-structure" title="Link to this heading">#</a></h2>
 <p>(include Res and short description/table - start with IEP demand modelling document)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Not working yet</span>
+
+<span class="kn">import</span> <span class="nn">openpyxl</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">matplotlib.patches</span> <span class="k">as</span> <span class="nn">patches</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="c1"># Path to your workbook</span>
+<span class="n">workbook_path</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;Resources\Standardised Workbook Template_References.xlsx&quot;</span>
+
+<span class="c1"># Load the workbook and select the sheet</span>
+<span class="n">wb</span> <span class="o">=</span> <span class="n">openpyxl</span><span class="o">.</span><span class="n">load_workbook</span><span class="p">(</span><span class="n">workbook_path</span><span class="p">,</span> <span class="n">data_only</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">sheet</span> <span class="o">=</span> <span class="n">wb</span><span class="p">[</span><span class="s2">&quot;RES equip&quot;</span><span class="p">]</span>
+
+<span class="c1"># Define the range to extract (A6:W80)</span>
+<span class="n">start_row</span><span class="p">,</span> <span class="n">end_row</span> <span class="o">=</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">80</span>
+<span class="n">start_col</span><span class="p">,</span> <span class="n">end_col</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">23</span>  <span class="c1"># Columns A (1) to W (23)</span>
+
+<span class="c1"># Extract data from the specified range and store the borders</span>
+<span class="n">data</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">cell_borders</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">sheet</span><span class="o">.</span><span class="n">iter_rows</span><span class="p">(</span><span class="n">min_row</span><span class="o">=</span><span class="n">start_row</span><span class="p">,</span> <span class="n">max_row</span><span class="o">=</span><span class="n">end_row</span><span class="p">,</span> <span class="n">min_col</span><span class="o">=</span><span class="n">start_col</span><span class="p">,</span> <span class="n">max_col</span><span class="o">=</span><span class="n">end_col</span><span class="p">):</span>
+    <span class="n">row_data</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">row_borders</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">cell</span> <span class="ow">in</span> <span class="n">row</span><span class="p">:</span>
+        <span class="n">row_data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">cell</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>  <span class="c1"># Cell content</span>
+        <span class="n">row_borders</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">cell</span><span class="o">.</span><span class="n">border</span><span class="p">)</span>  <span class="c1"># Cell border info</span>
+    <span class="n">data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">row_data</span><span class="p">)</span>
+    <span class="n">cell_borders</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">row_borders</span><span class="p">)</span>
+
+<span class="c1"># Plot the data as a table using matplotlib</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>  <span class="c1"># Adjust the figure size as needed</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s2">&quot;off&quot;</span><span class="p">)</span>  <span class="c1"># Turn off the axis</span>
+
+<span class="n">nrows</span><span class="p">,</span> <span class="n">ncols</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+
+<span class="c1"># Calculate cell width and height based on the number of rows and columns</span>
+<span class="n">col_width</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="n">ncols</span>
+<span class="n">row_height</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="n">nrows</span>
+
+<span class="c1"># Draw cells and text from the Excel sheet</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nrows</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">ncols</span><span class="p">):</span>
+        <span class="n">cell_value</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span>  <span class="c1"># Cell text</span>
+
+        <span class="c1"># Add cell as a rectangle with borders</span>
+        <span class="n">cell_border</span> <span class="o">=</span> <span class="n">cell_borders</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span>
+        <span class="n">left_border</span> <span class="o">=</span> <span class="n">cell_border</span><span class="o">.</span><span class="n">left</span><span class="o">.</span><span class="n">style</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+        <span class="n">right_border</span> <span class="o">=</span> <span class="n">cell_border</span><span class="o">.</span><span class="n">right</span><span class="o">.</span><span class="n">style</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+        <span class="n">top_border</span> <span class="o">=</span> <span class="n">cell_border</span><span class="o">.</span><span class="n">top</span><span class="o">.</span><span class="n">style</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+        <span class="n">bottom_border</span> <span class="o">=</span> <span class="n">cell_border</span><span class="o">.</span><span class="n">bottom</span><span class="o">.</span><span class="n">style</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+
+        <span class="c1"># Draw the borders manually based on the border style</span>
+        <span class="k">if</span> <span class="n">left_border</span><span class="p">:</span>
+            <span class="n">ax</span><span class="o">.</span><span class="n">add_patch</span><span class="p">(</span><span class="n">patches</span><span class="o">.</span><span class="n">Rectangle</span><span class="p">((</span><span class="n">j</span> <span class="o">/</span> <span class="n">ncols</span><span class="p">,</span> <span class="mi">1</span> <span class="o">-</span> <span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="n">nrows</span><span class="p">),</span> <span class="n">col_width</span><span class="p">,</span> <span class="n">row_height</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">))</span>
+        <span class="k">if</span> <span class="n">right_border</span><span class="p">:</span>
+            <span class="n">ax</span><span class="o">.</span><span class="n">add_patch</span><span class="p">(</span><span class="n">patches</span><span class="o">.</span><span class="n">Rectangle</span><span class="p">(((</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="n">ncols</span><span class="p">,</span> <span class="mi">1</span> <span class="o">-</span> <span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="n">nrows</span><span class="p">),</span> <span class="n">col_width</span><span class="p">,</span> <span class="n">row_height</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">))</span>
+        <span class="k">if</span> <span class="n">top_border</span><span class="p">:</span>
+            <span class="n">ax</span><span class="o">.</span><span class="n">add_patch</span><span class="p">(</span><span class="n">patches</span><span class="o">.</span><span class="n">Rectangle</span><span class="p">((</span><span class="n">j</span> <span class="o">/</span> <span class="n">ncols</span><span class="p">,</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">i</span> <span class="o">/</span> <span class="n">nrows</span><span class="p">),</span> <span class="n">col_width</span><span class="p">,</span> <span class="n">row_height</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">))</span>
+        <span class="k">if</span> <span class="n">bottom_border</span><span class="p">:</span>
+            <span class="n">ax</span><span class="o">.</span><span class="n">add_patch</span><span class="p">(</span><span class="n">patches</span><span class="o">.</span><span class="n">Rectangle</span><span class="p">((</span><span class="n">j</span> <span class="o">/</span> <span class="n">ncols</span><span class="p">,</span> <span class="mi">1</span> <span class="o">-</span> <span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="n">nrows</span><span class="p">),</span> <span class="n">col_width</span><span class="p">,</span> <span class="n">row_height</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">))</span>
+
+        <span class="c1"># Add cell text (if any)</span>
+        <span class="k">if</span> <span class="n">cell_value</span><span class="p">:</span>
+            <span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">j</span> <span class="o">/</span> <span class="n">ncols</span> <span class="o">+</span> <span class="mf">0.5</span> <span class="o">/</span> <span class="n">ncols</span><span class="p">,</span> <span class="mi">1</span> <span class="o">-</span> <span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="n">nrows</span> <span class="o">+</span> <span class="mf">0.5</span> <span class="o">/</span> <span class="n">nrows</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">cell_value</span><span class="p">),</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
+
+<span class="c1"># Save the diagram as an image</span>
+<span class="n">output_path</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;Images\com_res_diagram.png&quot;</span>
+<span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">output_path</span><span class="p">),</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>  <span class="c1"># Ensure directory exists</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">output_path</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s2">&quot;tight&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Image saved at </span><span class="si">{</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">output_path</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Image saved at C:\Users\savan\SATIMGE-VedaOnline-Documentation\SATIMGE-VedaOnline-Documentation\docs\Images\com_res_diagram.png
+</pre></div>
+</div>
+</div>
+</div>
+<section id="res-diagram-for-the-commercial-sector">
+<h3>RES Diagram for the Commercial Sector<a class="headerlink" href="#res-diagram-for-the-commercial-sector" title="Link to this heading">#</a></h3>
+<p>The following diagram represents the RES equipment configuration for the commercial sector:</p>
+<p><img alt="Commercial RES Diagram" src="_images/com_res_diagram.png" /></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">openpyxl</span>
+
+<span class="c1"># Path to your workbook</span>
+<span class="n">workbook_path</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;Resources\Standardised Workbook Template_References.xlsx&quot;</span>
+
+<span class="c1"># Load the workbook and select the sheet</span>
+<span class="n">wb</span> <span class="o">=</span> <span class="n">openpyxl</span><span class="o">.</span><span class="n">load_workbook</span><span class="p">(</span><span class="n">workbook_path</span><span class="p">,</span> <span class="n">data_only</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">sheet</span> <span class="o">=</span> <span class="n">wb</span><span class="p">[</span><span class="s1">&#39;References&#39;</span><span class="p">]</span>  <span class="c1"># Access the &#39;References&#39; sheet</span>
+
+<span class="c1"># Access the table by its name</span>
+<span class="n">table</span> <span class="o">=</span> <span class="n">sheet</span><span class="o">.</span><span class="n">tables</span><span class="p">[</span><span class="s1">&#39;References_1&#39;</span><span class="p">]</span>
+
+<span class="c1"># Get the range of the table (this will dynamically adjust if rows or columns are added)</span>
+<span class="n">table_range</span> <span class="o">=</span> <span class="n">table</span><span class="o">.</span><span class="n">ref</span>  <span class="c1"># This gives the table&#39;s range, e.g., &#39;A1:D10&#39;</span>
+
+<span class="c1"># Extract the data from the table range</span>
+<span class="n">data</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">sheet</span><span class="p">[</span><span class="n">table_range</span><span class="p">]:</span>
+    <span class="n">data_row</span> <span class="o">=</span> <span class="p">[</span><span class="n">cell</span><span class="o">.</span><span class="n">value</span> <span class="k">for</span> <span class="n">cell</span> <span class="ow">in</span> <span class="n">row</span><span class="p">]</span>
+    <span class="n">data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">data_row</span><span class="p">)</span>
+
+<span class="c1"># Print the imported data</span>
+<span class="c1">#for row in data:</span>
+    <span class="c1">#print(row)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="table-x-key-references-from-the-commercial-sector">
+<h2>Table x: Key References from the Commercial Sector<a class="headerlink" href="#table-x-key-references-from-the-commercial-sector" title="Link to this heading">#</a></h2>
+<p>This table consolidates key references used in the commercial sector modelling. It includes essential data variables, their corresponding values, units, and references, with relevant assumptions and workbook locations. It is designed to ensure transparency and traceability in the analysis.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">openpyxl</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span>
+
+<span class="c1"># Path to your workbook</span>
+<span class="n">workbook_path</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;Resources\Standardised Workbook Template_References.xlsx&quot;</span>
+
+<span class="c1"># Load the workbook and select the sheet</span>
+<span class="n">wb</span> <span class="o">=</span> <span class="n">openpyxl</span><span class="o">.</span><span class="n">load_workbook</span><span class="p">(</span><span class="n">workbook_path</span><span class="p">,</span> <span class="n">data_only</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">sheet</span> <span class="o">=</span> <span class="n">wb</span><span class="p">[</span><span class="s1">&#39;References&#39;</span><span class="p">]</span>  <span class="c1"># Access the &#39;References&#39; sheet</span>
+
+<span class="c1"># Access the table by its name</span>
+<span class="n">table</span> <span class="o">=</span> <span class="n">sheet</span><span class="o">.</span><span class="n">tables</span><span class="p">[</span><span class="s1">&#39;References_1&#39;</span><span class="p">]</span>
+
+<span class="c1"># Get the range of the table (this will dynamically adjust if rows or columns are added)</span>
+<span class="n">table_range</span> <span class="o">=</span> <span class="n">table</span><span class="o">.</span><span class="n">ref</span>  <span class="c1"># This gives the table&#39;s range, e.g., &#39;A1:D10&#39;</span>
+
+<span class="c1"># Extract the data from the table range</span>
+<span class="n">data</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">sheet</span><span class="p">[</span><span class="n">table_range</span><span class="p">]:</span>
+    <span class="n">data_row</span> <span class="o">=</span> <span class="p">[</span><span class="n">cell</span><span class="o">.</span><span class="n">value</span> <span class="k">for</span> <span class="n">cell</span> <span class="ow">in</span> <span class="n">row</span><span class="p">]</span>
+    <span class="n">data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">data_row</span><span class="p">)</span>
+
+<span class="c1"># The first row is the header</span>
+<span class="n">headers</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="c1"># The remaining rows are the data</span>
+<span class="n">data_without_headers</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
+
+<span class="c1"># Convert the data into a pandas DataFrame, using the first row as column headers</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data_without_headers</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+
+<span class="c1"># Apply left alignment to the entire DataFrame</span>
+<span class="n">df_style</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">set_properties</span><span class="p">(</span><span class="o">**</span><span class="p">{</span><span class="s1">&#39;text-align&#39;</span><span class="p">:</span> <span class="s1">&#39;left&#39;</span><span class="p">})</span>
+
+<span class="c1"># Display the DataFrame as a table in Jupyter</span>
+<span class="n">display</span><span class="p">(</span><span class="n">df_style</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style type="text/css">
+#T_c29cb_row0_col0, #T_c29cb_row0_col1, #T_c29cb_row0_col2, #T_c29cb_row0_col3, #T_c29cb_row0_col4, #T_c29cb_row0_col5, #T_c29cb_row0_col6, #T_c29cb_row1_col0, #T_c29cb_row1_col1, #T_c29cb_row1_col2, #T_c29cb_row1_col3, #T_c29cb_row1_col4, #T_c29cb_row1_col5, #T_c29cb_row1_col6 {
+  text-align: left;
+}
+</style>
+<table id="T_c29cb">
+  <thead>
+    <tr>
+      <th class="blank level0" >&nbsp;</th>
+      <th id="T_c29cb_level0_col0" class="col_heading level0 col0" >Description </th>
+      <th id="T_c29cb_level0_col1" class="col_heading level0 col1" >Value (Range)</th>
+      <th id="T_c29cb_level0_col2" class="col_heading level0 col2" >Unit</th>
+      <th id="T_c29cb_level0_col3" class="col_heading level0 col3" >Other dimension</th>
+      <th id="T_c29cb_level0_col4" class="col_heading level0 col4" >Reference (Harvard format)</th>
+      <th id="T_c29cb_level0_col5" class="col_heading level0 col5" >Notes/Assumptions</th>
+      <th id="T_c29cb_level0_col6" class="col_heading level0 col6" >Workbook Location </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_c29cb_level0_row0" class="row_heading level0 row0" >0</th>
+      <td id="T_c29cb_row0_col0" class="data row0 col0" >Capital cost for retrofitting current existing kilns with CCS capture technology</td>
+      <td id="T_c29cb_row0_col1" class="data row0 col1" >Rather link to cells in location. 2017: 2022 ZAR R/kW</td>
+      <td id="T_c29cb_row0_col2" class="data row0 col2" >ZAR/t CO2 captured</td>
+      <td id="T_c29cb_row0_col3" class="data row0 col3" >By 2030, 2040</td>
+      <td id="T_c29cb_row0_col4" class="data row0 col4" >Department of Mineral Resources and Energy (2019). Integrated Resource Plan (IRP2019). [online] Available at: https://www.energy.gov.za/IRP/2019/IRP-2019.pdf </td>
+      <td id="T_c29cb_row0_col5" class="data row0 col5" >The capital costs show that to retrofit a 1 Mt cement plant with full oxy-fuel combustion will cost roughly R1.9 billion (2016). Cement Production capacity of 21.5 Mt/year </td>
+      <td id="T_c29cb_row0_col6" class="data row0 col6" >SATIMGE_Veda\VT_REGION1_ELC.xlsx\ProcDataRECostProfile\G9-L19</td>
+    </tr>
+    <tr>
+      <th id="T_c29cb_level0_row1" class="row_heading level0 row1" >1</th>
+      <td id="T_c29cb_row1_col0" class="data row1 col0" >Overnight Investment Costs (undiscounted)</td>
+      <td id="T_c29cb_row1_col1" class="data row1 col1" >Rather link to cells in location. 2017:  R/kW</td>
+      <td id="T_c29cb_row1_col2" class="data row1 col2" >2022 ZAR/kW (AC)</td>
+      <td id="T_c29cb_row1_col3" class="data row1 col3" >2017 (base year), 2020, 2025, 2030, 2040, 2050</td>
+      <td id="T_c29cb_row1_col4" class="data row1 col4" >Department of Mineral Resources and Energy (2019). Integrated Resource Plan (IRP2019). [online] Available at: https://www.energy.gov.za/IRP/2019/IRP-2019.pdf </td>
+      <td id="T_c29cb_row1_col5" class="data row1 col5" >eg. Calculations based on  solar cost data […].</td>
+      <td id="T_c29cb_row1_col6" class="data row1 col6" >SATIMGE_Veda\VT_REGION1_ELC.xlsx\ProcDataRECostProfile\G9-L19</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+</section>
+<section id="attributes-in-the-commercial-sector">
+<h2>12.2 Attributes in the Commercial Sector<a class="headerlink" href="#attributes-in-the-commercial-sector" title="Link to this heading">#</a></h2>
+<p><em>Table 12.4: Attributes commonly used in the Commercial Sector</em></p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Attribute</strong></p></th>
+<th class="head"><p><strong>Description</strong></p></th>
+<th class="head"><p><strong>Purpose in Model</strong></p></th>
+<th class="head"><p><strong>Units</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>TechName</strong></p></td>
+<td><p>Name of the technology or appliance (e.g., Electric Heater).</p></td>
+<td><p>Identifies the technology being modeled.</p></td>
+<td><p>N/A</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Comm-IN</strong></p></td>
+<td><p>Incoming commodities or inputs to the technology.</p></td>
+<td><p>Represents the resources entering the technology.</p></td>
+<td><p>N/A</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Comm-OUT</strong></p></td>
+<td><p>Outgoing commodities or outputs from the technology.</p></td>
+<td><p>Represents the products generated by the technology.</p></td>
+<td><p>N/A</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>ACT_EFF</strong></p></td>
+<td><p>Activity efficiency of the technology in converting energy.</p></td>
+<td><p>Indicates how effectively the technology utilizes energy.</p></td>
+<td><p>Percentage (%)</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>NCAP_TLIFE</strong></p></td>
+<td><p>Technical lifetime of the technology.</p></td>
+<td><p>Represents the expected operational lifespan of the technology.</p></td>
+<td><p>Years</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>PRC_RESID</strong></p></td>
+<td><p>Share of the technology in the residential sector.</p></td>
+<td><p>Reflects the market penetration or adoption rate of the technology.</p></td>
+<td><p>Percentage (%)</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>INVCOST</strong></p></td>
+<td><p>Investment cost associated with the technology.</p></td>
+<td><p>Represents the capital investment required for the technology.</p></td>
+<td><p>2005 mill. R/PJ-a</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>FIXOM</strong></p></td>
+<td><p>Fixed operation and maintenance cost of the technology.</p></td>
+<td><p>Represents the annual fixed costs associated with the technology.</p></td>
+<td><p>2005 mill. R/PJ-a</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>NCAP_BND~UP ~0</strong></p></td>
+<td><p>Upper capacity bound at the initial period (year 0).</p></td>
+<td><p>Sets the initial capacity limits for the technology.</p></td>
+<td><p>kW or MW</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>FLO_MARK~UP ~(year)</strong></p></td>
+<td><p>Upper bound on the flow of energy for a given year.</p></td>
+<td><p>Sets an upper constraint on energy flow from the technology.</p></td>
+<td><p>Percentage (%)</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>FLO_MARK~LO ~(year)</strong></p></td>
+<td><p>Lower bound on the flow of energy for a given year.</p></td>
+<td><p>Sets a minimum requirement for energy flow to a market.</p></td>
+<td><p>Percentage (%)</p></td>
+</tr>
+</tbody>
+</table>
 <section id="commodities-in-the-commercial-sector">
-<h3>12.2 Commodities in the Commercial Sector<a class="headerlink" href="#commodities-in-the-commercial-sector" title="Link to this heading">#</a></h3>
+<h3>12.3 Commodities in the Commercial Sector<a class="headerlink" href="#commodities-in-the-commercial-sector" title="Link to this heading">#</a></h3>
 <p><em>Table 12.2.1: Output Commodities: Commercial End Uses</em></p>
 <table class="table">
 <thead>
@@ -499,7 +783,7 @@ document.write(`
 </tr>
 </tbody>
 </table>
-<p><em>Table 12.2.2: Input Commodities: Fuel Types</em></p>
+<p><em>Table 12.3.2: Input Commodities: Fuel Types</em></p>
 <table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p><strong>Commodity Code</strong></p></th>
@@ -554,7 +838,7 @@ document.write(`
 </section>
 </section>
 <section id="processes-in-the-commercial-sector">
-<h2>12.3 Processes in the Commercial Sector<a class="headerlink" href="#processes-in-the-commercial-sector" title="Link to this heading">#</a></h2>
+<h2>12.4 Processes in the Commercial Sector<a class="headerlink" href="#processes-in-the-commercial-sector" title="Link to this heading">#</a></h2>
 <p>In Veda Online, filtering by the following processes in the <em>Browse</em> or <em>Items View</em> tabs will display the data for the attributes and respective years in section 12.4 below:</p>
 <ul class="simple">
 <li><p>FLO_MARK: (description) for years 2017, 2020, 2025, 2030, 2035, 2040, 2045 and 2050.</p></li>
@@ -1266,76 +1550,6 @@ document.write(`
 </tbody>
 </table>
 </section>
-<section id="attributes-in-the-commercial-sector">
-<h2>12.4 Attributes in the Commercial Sector<a class="headerlink" href="#attributes-in-the-commercial-sector" title="Link to this heading">#</a></h2>
-<p><em>Table 12.4: Attributes used in the Commercial Sector</em></p>
-<table class="table">
-<thead>
-<tr class="row-odd"><th class="head"><p><strong>Attribute</strong></p></th>
-<th class="head"><p><strong>Description</strong></p></th>
-<th class="head"><p><strong>Purpose in Model</strong></p></th>
-<th class="head"><p><strong>Units</strong></p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p><strong>TechName</strong></p></td>
-<td><p>Name of the technology or appliance (e.g., Electric Heater).</p></td>
-<td><p>Identifies the technology being modeled.</p></td>
-<td><p>N/A</p></td>
-</tr>
-<tr class="row-odd"><td><p><strong>Comm-IN</strong></p></td>
-<td><p>Incoming commodities or inputs to the technology.</p></td>
-<td><p>Represents the resources entering the technology.</p></td>
-<td><p>N/A</p></td>
-</tr>
-<tr class="row-even"><td><p><strong>Comm-OUT</strong></p></td>
-<td><p>Outgoing commodities or outputs from the technology.</p></td>
-<td><p>Represents the products generated by the technology.</p></td>
-<td><p>N/A</p></td>
-</tr>
-<tr class="row-odd"><td><p><strong>ACT_EFF</strong></p></td>
-<td><p>Activity efficiency of the technology in converting energy.</p></td>
-<td><p>Indicates how effectively the technology utilizes energy.</p></td>
-<td><p>Percentage (%)</p></td>
-</tr>
-<tr class="row-even"><td><p><strong>NCAP_TLIFE</strong></p></td>
-<td><p>Technical lifetime of the technology.</p></td>
-<td><p>Represents the expected operational lifespan of the technology.</p></td>
-<td><p>Years</p></td>
-</tr>
-<tr class="row-odd"><td><p><strong>PRC_RESID</strong></p></td>
-<td><p>Share of the technology in the residential sector.</p></td>
-<td><p>Reflects the market penetration or adoption rate of the technology.</p></td>
-<td><p>Percentage (%)</p></td>
-</tr>
-<tr class="row-even"><td><p><strong>INVCOST</strong></p></td>
-<td><p>Investment cost associated with the technology.</p></td>
-<td><p>Represents the capital investment required for the technology.</p></td>
-<td><p>2005 mill. R/PJ-a</p></td>
-</tr>
-<tr class="row-odd"><td><p><strong>FIXOM</strong></p></td>
-<td><p>Fixed operation and maintenance cost of the technology.</p></td>
-<td><p>Represents the annual fixed costs associated with the technology.</p></td>
-<td><p>2005 mill. R/PJ-a</p></td>
-</tr>
-<tr class="row-even"><td><p><strong>NCAP_BND~UP ~0</strong></p></td>
-<td><p>Upper capacity bound at the initial period (year 0).</p></td>
-<td><p>Sets the initial capacity limits for the technology.</p></td>
-<td><p>kW or MW</p></td>
-</tr>
-<tr class="row-odd"><td><p><strong>FLO_MARK~UP ~(year)</strong></p></td>
-<td><p>Upper bound on the flow of energy for a given year.</p></td>
-<td><p>Sets an upper constraint on energy flow from the technology.</p></td>
-<td><p>Percentage (%)</p></td>
-</tr>
-<tr class="row-even"><td><p><strong>FLO_MARK~LO ~(year)</strong></p></td>
-<td><p>Lower bound on the flow of energy for a given year.</p></td>
-<td><p>Sets a minimum requirement for energy flow to a market.</p></td>
-<td><p>Percentage (%)</p></td>
-</tr>
-</tbody>
-</table>
-</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -1394,11 +1608,15 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modelling-structure">12.1 Modelling Structure</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#commodities-in-the-commercial-sector">12.2 Commodities in the Commercial Sector</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#res-diagram-for-the-commercial-sector">RES Diagram for the Commercial Sector</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#processes-in-the-commercial-sector">12.3 Processes in the Commercial Sector</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#attributes-in-the-commercial-sector">12.4 Attributes in the Commercial Sector</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#table-x-key-references-from-the-commercial-sector">Table x: Key References from the Commercial Sector</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#attributes-in-the-commercial-sector">12.2 Attributes in the Commercial Sector</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#commodities-in-the-commercial-sector">12.3 Commodities in the Commercial Sector</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#processes-in-the-commercial-sector">12.4 Processes in the Commercial Sector</a></li>
 </ul>
   </nav></div>
 
